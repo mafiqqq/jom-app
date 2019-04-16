@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=#>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      New Trip
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #createTripForm="ngForm" (ngSubmit)="logForm(form)" novalidate>
+
+    <!-- {{ createTripForm.value | json }} -->
+    <ion-grid>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Trip Type</ion-label>
+          <ion-select>
+            <!-- variables of trip type -->
+            <ion-select-option value="hiking">Hiking</ion-select-option>
+            <ion-select-option value="campsite">Campsite</ion-select-option>
+            <ion-select-option value="waterfall">Waterfall</ion-select-option>
+            <ion-select-option value="resort">Resort</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <!-- variable of trip name-->
+      <ion-item>
+        <ion-label>Trip Name</ion-label>
+        <ion-input name="trip_name" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <!-- variable of trip destination-->
+        <ion-label>Trip Destination</ion-label>
+        <ion-input name="trip_dest" ngModel></ion-input>
+        <!-- suggest suitable location -->
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-icon name="calendar"></ion-icon>
+            <ion-label>Start Date and Time</ion-label>
+            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="start_date_time" ngModel>
+            </ion-datetime>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-icon name="calendar"></ion-icon>
+            <ion-label>End Date and Time</ion-label>
+            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="end_date_time" ngModel>
+            </ion-datetime>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-icon name="people"></ion-icon>
+            <ion-label>Pax</ion-label>
+            <ion-input name="pax" ngModel></ion-input>
+          </ion-item>
+        </ion-col>
+
+
+        <ion-col>
+          <ion-item>
+            <ion-icon name="cash"></ion-icon>
+            <ion-label>MYR</ion-label>
+            <ion-input name="fee" ngModel></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-icon name="bed"></ion-icon>
+            <ion-label>Days/Nights</ion-label>
+            <ion-input name="num_day" ngModel></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-icon name="add-circle-outline"></ion-icon>
+            <ion-label>RV</ion-label>
+            <ion-input name="rv" ngModel></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-item>
+        <ion-textarea rows="3" cols="50" placeholder="Enter trip details ..." name="trip_details" ngModel>
+        </ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea rows="3" cols="50" placeholder="Payment details ..." name="payment_details" ngModel>
+        </ion-textarea>
+      </ion-item>
+
+
+      <ion-row>
+        <ion-col>
+          <ion-button href="#">Cancel</ion-button>
+        </ion-col>
+
+        <ion-col offset="4">
+          <ion-button type="submit" (click)="go()" block>Create </ion-button>
+        </ion-col>
+      </ion-row>
+
+
+    </ion-grid>
+  </form>
+</ion-content>
