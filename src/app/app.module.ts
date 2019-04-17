@@ -12,9 +12,15 @@ import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { AuthenticateService } from './services/authentication.service';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
  
 import * as firebase from 'firebase';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { TripService } from './tab3/shared/trip.service';
+
 
 firebase.initializeApp(environment.firebase);
 
@@ -26,10 +32,16 @@ firebase.initializeApp(environment.firebase);
     IonicModule.forRoot(), 
     AppRoutingModule,
     ReactiveFormsModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
+    
   ],
   providers: [
     StatusBar,
+    TripService,
     SplashScreen,
     AuthenticateService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

@@ -1,0 +1,39 @@
+<!--This is the F&B page for the event creator-->
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref=#>
+            </ion-back-button>
+            </ion-buttons>
+      <h3>Food and Beverage</h3>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <!--Day selection-->
+    <ion-item>
+      <ion-label>Day</ion-label>
+      <ion-select placeholder="Select">
+        <ion-select-option name="Day_1" value="1">1</ion-select-option>
+        <ion-select-option name="Day_2" value="2">2</ion-select-option>
+        <ion-select-option name="Day_2" value="3">3</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <!--Breakfast/Lunch/Dinner selection-->
+    <ion-item>
+      <ion-label>Meal</ion-label>
+      <ion-select placeholder="Select">
+        <ion-select-option name="breakfast">Breakfast</ion-select-option>
+        <ion-select-option name="lunch">Lunch</ion-select-option>
+        <ion-select-option name="dinner">Dinner</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <br><br>
+  
+    <!--The "Go" button-->
+    <ion-button (click)="go()" name="go" size="Default" expand="block">Go</ion-button>
+  
+  </ion-content>
+  <!--End-->
