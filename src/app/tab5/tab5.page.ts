@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-tab5',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab5Page implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
+  edit() {
+    this.router.navigateByUrl('/edit-profile');
+  }
 
+  showGallery() {
+    this.router.navigateByUrl('/gallery');
+  }
+  segmentChanged(ev: any) {
+    console.log('Segment changed', ev);
+  }
 }
+
+

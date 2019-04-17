@@ -15,7 +15,10 @@ const routes: Routes = [
 { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'trip-created', loadChildren: './trip-created/trip-created.module#TripCreatedPageModule' },
   { path: 'edit-trip-created', loadChildren: './edit-trip-created/edit-trip-created.module#EditTripCreatedPageModule' },
-  { path: 'member-list', loadChildren: './member-list/member-list.module#MemberListPageModule' }
+  { path: 'member-list', loadChildren: './member-list/member-list.module#MemberListPageModule' },  { path: 'edit-profile', loadChildren: './edit-profile/edit-profile.module#EditProfilePageModule' },
+  { path: 'gallery', loadChildren: './gallery/gallery.module#GalleryPageModule' },
+  { path: 'upload-photo', loadChildren: './upload-photo/upload-photo.module#UploadPhotoPageModule' }
+
 ];
 @NgModule({
   imports: [
