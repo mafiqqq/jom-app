@@ -26,7 +26,8 @@ firebase.initializeApp(environment.firebase);
     IonicModule.forRoot(), 
     AppRoutingModule,
     ReactiveFormsModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    
   ],
   providers: [
     StatusBar,

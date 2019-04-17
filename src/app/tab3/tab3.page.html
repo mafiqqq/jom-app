@@ -11,33 +11,31 @@
 </ion-header>
 
 <ion-content>
-  <form #createTripForm="ngForm" (ngSubmit)="logForm(form)" novalidate>
-
+  <form #form="ngForm" autocomplete="off" (submit)="createTrip(form)">
+    
     <!-- {{ createTripForm.value | json }} -->
     <ion-grid>
 
       <ion-list>
         <ion-item>
-          <ion-label>Trip Type</ion-label>
-          <ion-select>
+          <ion-select name="trip_type" #trip_type="ngModel" [(ngModel)]="service.formData.trip_type" class="form-control" placeholder="Trip Type">
             <!-- variables of trip type -->
-            <ion-select-option value="hiking">Hiking</ion-select-option>
-            <ion-select-option value="campsite">Campsite</ion-select-option>
-            <ion-select-option value="waterfall">Waterfall</ion-select-option>
-            <ion-select-option value="resort">Resort</ion-select-option>
+            <ion-select-option name="trip_type" value="hiking">Hiking</ion-select-option>
+            <ion-select-option name="trip_type" value="campsite">Campsite</ion-select-option>
+            <ion-select-option name="trip_type" value="waterfall">Waterfall</ion-select-option>
+            <ion-select-option name="trip_type" value="resort">Resort</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-list>
 
       <!-- variable of trip name-->
       <ion-item>
-        <ion-label>Trip Name</ion-label>
-        <ion-input name="trip_name" ngModel></ion-input>
+        <ion-input name="trip_name" #trip_name="ngModel" [(ngModel)]="service.formData.trip_name" class="form-control" ngModel placeholder="Trip Name"></ion-input>
       </ion-item>
+
       <ion-item>
         <!-- variable of trip destination-->
-        <ion-label>Trip Destination</ion-label>
-        <ion-input name="trip_dest" ngModel></ion-input>
+        <ion-input name="trip_dest" ngModel placeholder="Trip Destination"></ion-input>
         <!-- suggest suitable location -->
       </ion-item>
 
@@ -45,8 +43,7 @@
         <ion-col>
           <ion-item>
             <ion-icon name="calendar"></ion-icon>
-            <ion-label>Start Date and Time</ion-label>
-            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="start_date_time" ngModel>
+            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="start_date_time" ngModel placeholder="Start Date & Time">
             </ion-datetime>
           </ion-item>
         </ion-col>
@@ -56,8 +53,7 @@
         <ion-col>
           <ion-item>
             <ion-icon name="calendar"></ion-icon>
-            <ion-label>End Date and Time</ion-label>
-            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="end_date_time" ngModel>
+            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="end_date_time" ngModel placeholder="End Date & Time">
             </ion-datetime>
           </ion-item>
         </ion-col>
@@ -67,8 +63,7 @@
         <ion-col>
           <ion-item>
             <ion-icon name="people"></ion-icon>
-            <ion-label>Pax</ion-label>
-            <ion-input name="pax" ngModel></ion-input>
+            <ion-input name="pax" #pax="ngModel" [(ngModel)]="service.formData.pax" class="form-control" placeholder="Pax"></ion-input>
           </ion-item>
         </ion-col>
 
@@ -76,8 +71,7 @@
         <ion-col>
           <ion-item>
             <ion-icon name="cash"></ion-icon>
-            <ion-label>MYR</ion-label>
-            <ion-input name="fee" ngModel></ion-input>
+              <ion-input name="fee" ngModel placeholder="MYR"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -86,16 +80,14 @@
         <ion-col>
           <ion-item>
             <ion-icon name="bed"></ion-icon>
-            <ion-label>Days/Nights</ion-label>
-            <ion-input name="num_day" ngModel></ion-input>
+              <ion-input name="num_day" ngModel placeholder="Days / Nights"></ion-input>
           </ion-item>
         </ion-col>
 
         <ion-col>
           <ion-item>
             <ion-icon name="add-circle-outline"></ion-icon>
-            <ion-label>RV</ion-label>
-            <ion-input name="rv" ngModel></ion-input>
+            <ion-input name="rv" ngModel placeholder="RV"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -117,7 +109,7 @@
         </ion-col>
 
         <ion-col offset="4">
-          <ion-button type="submit" (click)="go()" block>Create </ion-button>
+          <ion-button type="submit" block>Create </ion-button>
         </ion-col>
       </ion-row>
 
