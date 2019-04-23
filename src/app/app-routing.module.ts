@@ -11,8 +11,11 @@ const routes: Routes = [
 
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
-{ path: '', redirectTo: 'login', pathMatch:'full'},
-{ path: '', loadChildren: './tabs/tabs.module#TabsPageModule' }
+  { path: '', redirectTo: 'login', pathMatch:'full'},
+  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
+  { path: 'trip-created', loadChildren: './tab3/trip-created/trip-created.module#TripCreatedPageModule' },
+  { path: 'edit-trip-created', loadChildren: './tab3/edit-trip-created/edit-trip-created.module#EditTripCreatedPageModule' },
+  { path: 'member-list', loadChildren: './tab3/member-list/member-list.module#MemberListPageModule' }
 ];
 @NgModule({
   imports: [
