@@ -1,0 +1,61 @@
+<!--
+This is the page for the 
+event creator to fill up the 
+information of the accommodation
+-->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=#>
+      </ion-back-button>
+      </ion-buttons>
+      <h3>Accommodation</h3>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row color="primary" justify-content-center>
+      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+
+        <!--This is the text field to fill in the accommodation name
+          The variable name for this text field is "acc_name"-->
+        <ion-item>
+          <ion-input name="acc_name" type="text" placeholder="Accommodation Name"></ion-input>
+        </ion-item>
+
+        <!--This is the text field to fill in the number of day(s) 
+          The variable name for this text field is "day"-->
+        <ion-item>
+          <ion-input name="day" type="number" placeholder="Day(s)"></ion-input>
+        </ion-item>
+
+        <!--This is the text field to fill in the number of night(s) 
+         The variable name for this text field is "night"-->
+        <ion-item>
+          <ion-input name="night" type="number" placeholder="Night(s)"></ion-input>
+        </ion-item>
+
+        <!--This is the text field which the event creator fills in the expiry date for the trip memmber to respond to 
+          the accommodation
+          The variable name for this text field is "expiry_date"-->
+        <ion-item>
+          <ion-label>Expiry Date</ion-label>
+          <ion-datetime name="expiry_date" display-format="DD-MM-YYYY"></ion-datetime>
+        </ion-item>
+
+        <br>
+        <br>
+
+        <!--This is the save button 
+          The variable name for this button is "save"-->
+          <a routerLink="/accommodation1">
+        <ion-button name="save" size="large" type="submit" expand="block">Save</ion-button></a>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<!--End-->>

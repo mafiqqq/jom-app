@@ -1,0 +1,50 @@
+<!--This page will be displayed after the day(s) and meal(s) are selected by the event creator-->
+<ion-header>
+    <ion-toolbar>
+        <h3>
+            <ion-buttons slot="start">
+              <ion-back-button defaultHref="about2"></ion-back-button>
+              <!--Sign up-->
+              <div text-center>
+                Breakfast
+              </div>
+            </ion-buttons>
+          </h3>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <br><br>
+  
+    <!--The table of F&B-->
+    <ion-grid>
+      <ion-row class="table">
+        <ion-col class="table">
+          <div class="deco">
+            Member
+          </div>
+        </ion-col>
+  
+        <ion-col class="table">
+          <div class="deco">
+            F&B
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <br>
+    <br>
+  
+    <!--Label-->
+    <ion-label size="18px"> No member volunteered yet!</ion-label>
+  
+    <br><br>
+  
+    <!--when "Plus" button is selected, the name of the event creator is added into the table-->
+    <div class="a">
+      <ion-img (click)="go()" name="plus" style="width: 62px; height: 76px;" src="assets/plus.png"></ion-img>
+    </div>
+  
+  </ion-content>
+  <!--End-->

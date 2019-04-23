@@ -1,0 +1,68 @@
+<!--
+This page displays the accommodation's details which set by the event creator.
+This is also the page for the event creator to edit/delete the 
+information of the accommodation which he/she had entered.
+-->
+
+<ion-header>
+    <ion-toolbar>
+      <!--Back button-->
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref=#>
+          </ion-back-button>
+          </ion-buttons>
+      <h3>Accommodation</h3>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+  
+          <!--This is the field to display the accommodation name
+            The variable name for this field is "acc_name"-->
+          <ion-item>
+            <ion-label name="acc_name" type="text" placeholder="Accommodation Name"></ion-label>
+          </ion-item>
+  
+          <!--This is the field to display the number of day(s) 
+            The variable name for this field is "day"-->
+          <ion-item>
+            <ion-label name="day" type="number" placeholder="Day(s)"></ion-label>
+          </ion-item>
+  
+          <!--This is the field to display the number of night(s) 
+           The variable name for this field is "night"-->
+          <ion-item>
+            <ion-label name="night" type="number" placeholder="Night(s)"></ion-label>
+          </ion-item>
+  
+          <!--This is the field which displays the expiry date for the trip memmber to respond to 
+            the accommodation
+            The variable name for this field is "expiry_date"-->
+          <ion-item>
+            <ion-label name="expiry_date" type="date" placeholder="expiry date"></ion-label>
+          </ion-item>
+  
+          <br>
+          <br>
+  
+          <!--This is the edit button 
+            The variable name for this button is "edit"
+            When the edit button is selected, it will go back to the previous page (about)
+            -->
+            <a routerLink="/accommodation">
+          <ion-button name="edit" size="large" type="submit" expand="block">Edit</ion-button></a>
+  
+          <!--This is the delete button 
+            The variable name for this button is "delete"
+            A pop-up window will be displayed when the event cretor selects the "Delete" button-->
+          <ion-button (click)="pop()" name="delete" size="large" type="submit" expand="block">Delete</ion-button>
+  
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  <!--End-->>

@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content>
-  <form #form="ngForm" autocomplete="off" (submit)="createTrip(form)">
+  <form #form="ngForm" (submit)="createTrip(form)">
     
     <!-- {{ createTripForm.value | json }} -->
     <ion-grid>
@@ -30,12 +30,12 @@
 
       <!-- variable of trip name-->
       <ion-item>
-        <ion-input name="trip_name" #trip_name="ngModel" [(ngModel)]="service.formData.trip_name" class="form-control" ngModel placeholder="Trip Name"></ion-input>
+        <ion-input name="trip_name" #trip_name="ngModel" [(ngModel)]="service.formData.trip_name" class="form-control" placeholder="Trip Name"></ion-input>
       </ion-item>
 
       <ion-item>
         <!-- variable of trip destination-->
-        <ion-input name="trip_dest" ngModel placeholder="Trip Destination"></ion-input>
+        <ion-input name="trip_dest" #trip_dest="ngModel" [(ngModel)]="service.formData.trip_dest" class="form-control" placeholder="Trip Destination"></ion-input>
         <!-- suggest suitable location -->
       </ion-item>
 
@@ -43,7 +43,7 @@
         <ion-col>
           <ion-item>
             <ion-icon name="calendar"></ion-icon>
-            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="start_date_time" ngModel placeholder="Start Date & Time">
+            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="start_date_time" placeholder="Start Date & Time" #start_date_time="ngModel" [(ngModel)]="service.formData.start_date_time" class="form-control">
             </ion-datetime>
           </ion-item>
         </ion-col>
@@ -53,7 +53,7 @@
         <ion-col>
           <ion-item>
             <ion-icon name="calendar"></ion-icon>
-            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="end_date_time" ngModel placeholder="End Date & Time">
+            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="end_date_time" placeholder="End Date & Time" #end_date_time="ngModel" [(ngModel)]="service.formData.end_date_time" class="form-control">
             </ion-datetime>
           </ion-item>
         </ion-col>
@@ -71,7 +71,7 @@
         <ion-col>
           <ion-item>
             <ion-icon name="cash"></ion-icon>
-              <ion-input name="fee" ngModel placeholder="MYR"></ion-input>
+              <ion-input name="fee" #fee="ngModel" [(ngModel)]="service.formData.fee" class="form-control" placeholder="MYR"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -80,25 +80,25 @@
         <ion-col>
           <ion-item>
             <ion-icon name="bed"></ion-icon>
-              <ion-input name="num_day" ngModel placeholder="Days / Nights"></ion-input>
+              <ion-input name="num_day" #num_day="ngModel" [(ngModel)]="service.formData.num_day" class="form-control" placeholder="Days / Nights"></ion-input>
           </ion-item>
         </ion-col>
 
         <ion-col>
           <ion-item>
             <ion-icon name="add-circle-outline"></ion-icon>
-            <ion-input name="rv" ngModel placeholder="RV"></ion-input>
+            <ion-input name="rv" #rv="ngModel" [(ngModel)]="service.formData.rv" class="form-control" placeholder="RV"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
 
       <ion-item>
-        <ion-textarea rows="3" cols="50" placeholder="Enter trip details ..." name="trip_details" ngModel>
+        <ion-textarea rows="3" cols="50" placeholder="Enter trip details ..." name="trip_details" #trip_details="ngModel" [(ngModel)]="service.formData.trip_details" class="form-control">
         </ion-textarea>
       </ion-item>
 
       <ion-item>
-        <ion-textarea rows="3" cols="50" placeholder="Payment details ..." name="payment_details" ngModel>
+        <ion-textarea rows="3" cols="50" placeholder="Payment details ..." name="payment_details" #payment_details="ngModel" [(ngModel)]="service.formData.payment_details" class="form-control">
         </ion-textarea>
       </ion-item>
 
@@ -109,7 +109,7 @@
         </ion-col>
 
         <ion-col offset="4">
-          <ion-button type="submit" block>Create </ion-button>
+          <ion-button type="submit" [disabled]="form.invalid" block>Create </ion-button>
         </ion-col>
       </ion-row>
 

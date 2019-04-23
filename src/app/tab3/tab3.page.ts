@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { TripService } from './shared/trip.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-tab3',
@@ -11,22 +12,26 @@ import { TripService } from './shared/trip.service';
 })
 export class Tab3Page implements OnInit{
  constructor(private router: Router,
-  private service:TripService,
-  private firestore: AngularFirestore) {}
+  private firestore: AngularFirestore,
+  private service: TripService,
+  private toastr: ToastrService) {}
 
-  
+
   ngOnInit() {
     this.resetForm();
   }
 
   resetForm(form?: NgForm)
   {
-    if (form!= null)
+    if (form!= null) {
       form.resetForm();
+    }
     this.service.formData = {
       trip_type: '',
       trip_name: '',
       trip_dest: '',
+      end_date_time: '',
+      start_date_time: '',
       pax: '',
       fee: '',
       num_day: '',
@@ -44,6 +49,9 @@ export class Tab3Page implements OnInit{
     let data = form.value;
     this.firestore.collection('trips').add(data);
     this.resetForm();
+    this.toastr.success('Created Successfully','Create Trip');
     this.go();
   }
+
+  
 }

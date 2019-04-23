@@ -1,0 +1,63 @@
+<!--This is the page where the event creator can edit/delete the f&b which he had entered-->
+<ion-header>
+    <ion-toolbar>
+      <h3>
+        <ion-buttons slot="start">
+          <ion-back-button (click)="nav()"></ion-back-button>
+          <!--Sign up-->
+          <div text-center>
+            Breakfast
+          </div>
+        </ion-buttons>
+      </h3>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <br><br>
+    <!--The table of F&B-->
+    <ion-grid>
+      <ion-row class="table">
+        <ion-col class="table">
+          <div class="deco">
+            Member
+          </div>
+        </ion-col>
+  
+        <ion-col class="table">
+          <div class="deco">
+            F&B
+          </div>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col class="table">
+          <div class="deco">
+            <ion-item>
+              <!--This is the field which displays the name of the event creator-->
+              <ion-label name="name" type="text" placeholder="Full Name"></ion-label>
+            </ion-item>
+          </div>
+        </ion-col>
+  
+        <ion-col class="table">
+          <div class="deco">
+            <ion-item>
+              <!--This is the field which displays the fb which entered by the event creator-->
+              <ion-label name="fnb" type="text" placeholder="Food/Drinks"></ion-label>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
+  
+    </ion-grid>
+    <br><br>
+  
+    <!--This is the "Edit" button which enables the event creator to edit the f&b-->
+    <ion-button (click)="go()" name="edit" size="large" type="submit" expand="block">Edit</ion-button>
+    <!--This is the "Delete" button which enables the event creator to delete the f&b-->
+    <ion-button (click)="pop()" name="delete" size="large" type="submit" expand="block">Delete</ion-button>
+  
+  </ion-content>
+  <!--End--> 
