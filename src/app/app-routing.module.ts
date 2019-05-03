@@ -11,14 +11,6 @@ const routes: Routes = [
 
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
-<<<<<<< HEAD
-=======
-  { path: '', redirectTo: 'login', pathMatch:'full'},
-  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
-//  { path: 'trip-created', loadChildren: './trip-created/trip-created.module#TripCreatedPageModule' },
-//  { path: 'edit-trip-created', loadChildren: './edit-trip-created/edit-trip-created.module#EditTripCreatedPageModule' },
-  { path: 'member-list', loadChildren: './member-list/member-list.module#MemberListPageModule' },
->>>>>>> ede1f3105bce844d1821ba4f648c3e034eef4486
   { path: 'edit-profile', loadChildren: './edit-profile/edit-profile.module#EditProfilePageModule' },
   { path: 'gallery', loadChildren: './gallery/gallery.module#GalleryPageModule' },
   { path: 'upload-photo', loadChildren: './upload-photo/upload-photo.module#UploadPhotoPageModule' },

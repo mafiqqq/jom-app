@@ -32,19 +32,12 @@ firebase.initializeApp(environment.firebase);
     IonicModule.forRoot(), 
     AppRoutingModule,
     ReactiveFormsModule,
-<<<<<<< HEAD
-=======
-    AngularFireAuthModule,
->>>>>>> ede1f3105bce844d1821ba4f648c3e034eef4486
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
-<<<<<<< HEAD
     
-=======
->>>>>>> ede1f3105bce844d1821ba4f648c3e034eef4486
   ],
   providers: [
     StatusBar,
