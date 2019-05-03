@@ -1,0 +1,30 @@
+
+ @media (min-width: 0px) {
+        .images {
+            column-count: 2;
+        }
+    }
+
+    @media (min-width: 420px) {
+        .images {
+            column-count: 3;
+        }
+    }
+ 
+    @media (min-width: 720px) {
+        .images {
+            column-count: 4;
+        }
+    }
+ 
+    .one-image {
+        margin: 0;
+        padding: 0;
+    }
+
+    ion-button{
+        float: right;
+        position: fixed;
+        right: 0;
+        bottom: 2px;
+    }

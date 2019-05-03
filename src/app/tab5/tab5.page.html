@@ -8,3 +8,188 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+
+<ion-content padding>
+  <div class="profile">
+    <!-- Profile Avatar -->
+    <ion-avatar style="margin: auto">
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <h5>Miss Nina</h5>
+
+    <!-- Star Rating (icon only) -->
+    <ion-row>
+      <ion-icon name="star" color="yellow"></ion-icon>
+      <ion-icon name="star" color="yellow"></ion-icon>
+      <ion-icon name="star" color="yellow"></ion-icon>
+      <ion-icon name="star" color="yellow"></ion-icon>
+      <ion-icon name="star" color="yellow"></ion-icon>
+    </ion-row>
+    <!-- Bio -->
+    <p>A wanderlust</p>
+  </div>
+  <div class="profile-info">
+    <p><b>Nina Joseph</b></p>
+    <p>Kuala Lumpur | Hiking enthusiast | Swimmer</p>
+    <ion-button size="small" (click)="edit()">Edit Profile</ion-button>
+  </div>
+
+  <br><br>
+
+  <!-- My Gallery Section -->
+  <div class="my-gallery">
+    <ion-card class="profile-card">
+      <ion-grid class="my-gallery-header">
+        <ion-row>
+          <ion-col align-self-baseline>
+            <div>
+              <h5>My Gallery</h5>
+            </div>
+          </ion-col>
+
+          <!-- click "Show all" to display all the photos in the gallery-->
+          <ion-col align-self-baseline>
+            <div class="ion-text-end">
+              <a (click)="showGallery()">Show all</a>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <!-- Display few latest image uploaded to gallery -->
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-img src="assets/image/1.jpg"></ion-img>
+          </ion-col>
+
+          <ion-col>
+            <ion-img src="assets/image/2.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-img src="assets/image/3.jpg"></ion-img>
+          </ion-col>
+
+          <ion-col>
+            <ion-img src="assets/image/4.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </div>
+
+  <br>
+
+  <!-- My Trips Section -->
+  <div class="my-trips">
+    <ion-card class="profile-card">
+      <ion-grid class="my-trips-header">
+        <ion-row>
+          <ion-col>
+            <h5>My Trips</h5>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <div padding>
+        <!-- Two segment: upcoming and history trips -->
+        <ion-segment [(ngModel)]="trips" color="primary" (ionChange)="segmentChanged($event)">
+          <ion-segment-button value="upcoming">
+            Upcoming
+          </ion-segment-button>
+          <ion-segment-button value="history">
+            History
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+
+      <div [ngSwitch]="trips" class="trips">
+
+        <!-- Upcoming Trips segment -->
+        <ion-list *ngSwitchCase="'upcoming'">
+
+          <!-- upcoming trips example 1 -->
+          <ion-item lines="none">
+            <ion-card class="trips-card">
+              <ion-item-divider>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                      <h5>Ali's Hiking Trip</h5>
+                    </ion-col>
+
+                    <!-- Location of the trip, hyperlink to the location page -->
+                    <ion-col align-self-baseline>
+                      <div class="ion-text-end">
+                        <a>
+                          <ion-icon name="pin"></ion-icon>
+                          Bukit Broga
+                        </a>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+
+              </ion-item-divider>
+
+              <!-- Trips basic info: trip name, date and time -->
+              <div>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size="3">
+                      <p>Departure</p>
+                    </ion-col>
+                    <ion-col size="5">
+                      <ion-icon name="calendar" size="small"></ion-icon>
+                      <p>30 March 2019</p>
+                    </ion-col>
+
+                    <ion-col size="3">
+                      <ion-icon name="time" size="small"></ion-icon>
+                      <p>2:00am</p>
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-row>
+                    <ion-col size="3">
+                      <p>Return</p>
+                    </ion-col>
+                    <ion-col size="5">
+                      <ion-icon name="calendar" size="small"></ion-icon>
+                      <p>31 March 2019</p>
+                    </ion-col>
+
+                    <ion-col size="3">
+                      <ion-icon name="time" size="small"></ion-icon>
+                      <p>6:00pm</p>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+            </ion-card>
+          </ion-item>
+
+          <br>
+
+        </ion-list>
+
+        <br>
+
+        <!-- History Segment -->
+        <ion-list *ngSwitchCase="'history'">
+          <ion-item>
+            <ion-card>
+              <ion-label>No any history yet.</ion-label>
+            </ion-card>
+          </ion-item>
+
+        </ion-list>
+      </div>
+    </ion-card>
+  </div>
+
+</ion-content>

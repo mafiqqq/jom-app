@@ -1,0 +1,97 @@
+.my-trips-segment{
+    padding-top: 10px;
+}
+
+.my-gallery-header, .my-trips-header{
+    padding-bottom: 3px;
+}
+
+.my-gallery-header h5, .my-gallery-header p, .my-trips-header h5 {
+    margin-top: 5px;
+    margin-bottom: 0;
+
+}
+
+.profile-info p{
+    font-size: 12px;
+    padding: 0;
+    line-height: 5px;
+    
+}
+
+.profile-info ion-button{
+    float: right;
+    margin-bottom: 25px;
+}
+
+.profile, .profile ion-row ion-icon{
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+.profile p, .profile h5{
+    margin: 5px;
+}
+
+
+.profile-card {
+    width:100%;
+    margin: 0;
+    
+  }
+
+.trips p{
+    font-size: 14px;
+    margin: 5px;
+}
+
+.trips-card{
+    width: 98% !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: 0.5px solid grey;
+}
+ion-card{
+    border-radius: 15px;
+}
+ion-item{
+    padding: 0px !important;
+    margin: 0;
+}
+
+ion-item-divider{
+    padding: 0;
+}
+
+ion-row{
+    padding: 1px;
+}
+
+ion-col{
+    padding: 1px;
+}
+
+ion-grid{
+    padding: 10px;
+}
+
+ion-img{
+ height: 100px;
+ width: 100%;
+ object-fit: cover;
+}
+
+.trips ion-col, .trips ion-row{
+    padding: 3px;
+    display: flex;
+}
+
+.trips-card ion-col, .trips-card ion-row{
+    padding: 0;
+    display: flex;
+}
+
+.trips-card h5{
+    margin:0;
+}
