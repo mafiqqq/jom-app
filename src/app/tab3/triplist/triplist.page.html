@@ -1,0 +1,22 @@
+<table class="table table-hover">
+  <thead>
+    <th>Trip Type</th>
+    <th>Trip Name</th>
+    <th>Destination</th>
+    <th>Fees</th>
+    <th>Pax</th>
+    <th>RV</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let trp of list">
+      <td (click)="onEdit(trp)" >  {{trp.trip_type}}   </td>
+      <td (click)="onEdit(trp)" >  {{trp.trip_name}}   </td>
+      <td (click)="onEdit(trp)" >  {{trp.trip_dest}}   </td>
+      <td (click)="onEdit(trp)" >  {{trp.fee}}         </td>
+      <td (click)="onEdit(trp)" >  {{trp.pax}}       </td>
+      <td (click)="onEdit(trp)" >  {{trp.rv}}         </td>
+        <td><a class="btn text-danger" (click)="onDelete(trp.id)"><i class="fa fa-trash"></i></a></td>
+    </tr>
+  </tbody>
+</table>
