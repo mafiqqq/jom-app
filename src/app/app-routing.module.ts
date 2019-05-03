@@ -15,13 +15,15 @@ const routes: Routes = [
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'trip-created', loadChildren: './tab3/trip-created/trip-created.module#TripCreatedPageModule' },
   { path: 'edit-trip-created', loadChildren: './tab3/edit-trip-created/edit-trip-created.module#EditTripCreatedPageModule' },
-  { path: 'member-list', loadChildren: './tab3/member-list/member-list.module#MemberListPageModule' },  { path: 'accommodation', loadChildren: './tab3/accommodation/accommodation.module#AccommodationPageModule' },
+  { path: 'member-list', loadChildren: './tab3/member-list/member-list.module#MemberListPageModule' },
+  { path: 'accommodation', loadChildren: './tab3/accommodation/accommodation.module#AccommodationPageModule' },
   { path: 'accommodation1', loadChildren: './tab3/accommodation1/accommodation1.module#Accommodation1PageModule' },
-  { path: 'ratinf', loadChildren: './ratinf/ratinf.module#RatinfPageModule' },
   { path: 'fnb', loadChildren: './tab3/fnb/fnb.module#FnbPageModule' },
   { path: 'fnb1', loadChildren: './tab3/fnb1/fnb1.module#Fnb1PageModule' },
   { path: 'fnb2', loadChildren: './tab3/fnb2/fnb2.module#Fnb2PageModule' },
-  { path: 'fnb3', loadChildren: './tab3/fnb3/fnb3.module#Fnb3PageModule' }
+  { path: 'fnb3', loadChildren: './tab3/fnb3/fnb3.module#Fnb3PageModule' },
+  { path: 'rating', loadChildren: './rating/rating.module#RatingPageModule' },
+  { path: 'rating', loadChildren: './rating/rating.module#RatingPageModule' }
 
 ];
 @NgModule({
