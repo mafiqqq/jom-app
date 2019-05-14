@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar color="primary">
+    <ion-toolbar color="success">
       <ion-title>Login</ion-title>
     </ion-toolbar>
   </ion-header>
@@ -7,7 +7,7 @@
   <ion-content padding>
   
     <ion-grid>
-      <ion-row color="primary" justify-content-center>
+      <ion-row color="success" justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
   
           <form class="form" [formGroup]="validations_form" (ngSubmit)="loginUser(validations_form.value)">
@@ -45,7 +45,7 @@
   
             <br><br>
             <!--Login button-->
-            <ion-button class="submit-btn" size="large" type="submit" [disabled]="!validations_form.valid" expand="block">
+            <ion-button class="submit-btn" size="large" type="submit" [disabled]="!validations_form.valid" expand="block" color="success">
               LogIn
             </ion-button>
   
@@ -76,7 +76,7 @@
           <br>
   
           <!--This is the Forget Password button-->
-          <ion-button name="forget_password" size="small" type="submit">Forgot Password</ion-button>
+          <ion-button name="forget_password" size="small" type="submit" color="success">Forgot Password</ion-button>
   
           <div class="l">
             <!--This is the Help button-->

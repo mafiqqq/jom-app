@@ -11,6 +11,7 @@ export class Tab1Page {
   
   //[START] This is to test the dashboard whether can get email and logout
   userEmail: string;
+  router: any;
  
   constructor(
     private navCtrl: NavController,
@@ -36,7 +37,10 @@ export class Tab1Page {
       console.log(error);
     })
   }
-
+  go(){
+    // this.router.navigate(['jointrip']);
+    this.navCtrl.navigateForward('/jointrip');
+  }
   //[END] The test ends here
 }
 

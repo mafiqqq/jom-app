@@ -32,15 +32,11 @@ firebase.initializeApp(environment.firebase);
     IonicModule.forRoot(), 
     AppRoutingModule,
     ReactiveFormsModule,
-<<<<<<< HEAD
-    AngularFireAuthModule
-=======
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
->>>>>>> 3d419f096bd04d3b2c6569deff78cb8f769daf6f
     
   ],
   providers: [

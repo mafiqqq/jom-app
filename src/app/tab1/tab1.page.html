@@ -3,7 +3,7 @@
     <ion-title>
       JOM!
     </ion-title>
-    <ion-buttons slot="start">
+    <ion-buttons slot="start" color="success">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
@@ -25,8 +25,8 @@
     </ion-row>
   </ion-grid>
 
-  <ion-button (click)="logout()">Log Out</ion-button>
-  <ion-toolbar color="secondary">
+  <ion-button (click)="logout()" color="success">Log Out</ion-button>
+  <ion-toolbar color="success">
     <ion-title>Log out</ion-title>
   </ion-toolbar>
 
@@ -37,3 +37,270 @@
 </ion-footer> -->
 
 <!-- [END] Testing ends here -->
+
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>
+      Join Trip
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+    <ion-list lines="none">
+      <ion-card>
+      <ion-list-header>
+          <ion-list>
+              <ion-icon slot="start" color="medium" name="search"></ion-icon>
+              <ion-label> Search</ion-label>            
+              <ion-item>
+                <ion-input placeholder="Enter State"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-input placeholder="Enter Location"></ion-input>
+                </ion-item>
+            </ion-list>      
+          </ion-list-header>                
+          <ion-button id="search" color="success" >search</ion-button>
+        </ion-card>
+
+     <!-- new trip card -->
+  <ion-card>
+      <ion-item  color="success">
+        <ion-label (click)="go()">Ali's Hiking Trip</ion-label>
+         <!-- Location of the trip, hyperlink to the location page -->
+         <ion-col align-self-baseline>
+
+          <div class="ion-text-end">
+            <a><ion-icon name="pin"></ion-icon> Bukit Broga</a>
+          </div>
+        </ion-col>
+      </ion-item>
+      <ion-card-content>
+          <!-- Trips basic info: trip name, date and time -->
+          <div>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="3">
+                  <p>Departure</p>
+                </ion-col>
+                <ion-col size="5">
+                  <ion-icon name="calendar" size="small"></ion-icon>
+                  <p></p>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-icon name="time" size="small"></ion-icon>
+                  <p></p>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col size="3">
+                  <p>Return</p>
+                </ion-col>
+                <ion-col size="5">
+                  <ion-icon name="calendar" size="small"></ion-icon>
+                  <p></p>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-icon name="time" size="small"></ion-icon>
+                  <p></p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="3">
+                  <p>MYR</p>
+                </ion-col>
+                <ion-col size="5">
+                  <ion-icon name="cash" size="small"></ion-icon>
+                  <p></p>
+                </ion-col>
+              </ion-row>
+
+            </ion-grid>
+          </div>
+        </ion-card-content>
+  </ion-card>
+
+<!-- new trip card -->
+  <ion-card>
+      <ion-item  color="success">
+        <ion-label (click)="go()">Fizah's Camping Trip</ion-label>
+         <!-- Location of the trip, hyperlink to the location page -->
+         <ion-col align-self-baseline>
+
+          <div class="ion-text-end">
+            <a><ion-icon name="pin"></ion-icon> Port Dickson</a>
+          </div>
+        </ion-col>
+      </ion-item>
+      <ion-card-content>
+          <!-- Trips basic info: trip name, date and time -->
+          <div>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="3">
+                  <p>Departure</p>
+                </ion-col>
+                <ion-col size="5">
+                  <ion-icon name="calendar" size="small"></ion-icon>
+                  <p></p>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-icon name="time" size="small"></ion-icon>
+                  <p></p>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col size="3">
+                  <p>Return</p>
+                </ion-col>
+                <ion-col size="5">
+                  <ion-icon name="calendar" size="small"></ion-icon>
+                  <p></p>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-icon name="time" size="small"></ion-icon>
+                  <p></p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="3">
+                  <p>MYR</p>
+                </ion-col>
+                <ion-col size="5">
+                  <ion-icon name="cash" size="small"></ion-icon>
+                  <p></p>
+                </ion-col>
+              </ion-row>
+
+            </ion-grid>
+          </div>
+        </ion-card-content>
+  </ion-card>
+
+  <!-- new trip card -->
+  <ion-card>
+    <ion-item  color="success">
+      <ion-label (click)="go()">Joseph's Kayaking Trip</ion-label>
+       <!-- Location of the trip, hyperlink to the location page -->
+       <ion-col align-self-baseline>
+
+        <div class="ion-text-end">
+          <a><ion-icon name="pin"></ion-icon> Sungai Gadut</a>
+        </div>
+      </ion-col>
+    </ion-item>
+    <ion-card-content>
+        <!-- Trips basic info: trip name, date and time -->
+        <div>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="3">
+                <p>Departure</p>
+              </ion-col>
+              <ion-col size="5">
+                <ion-icon name="calendar" size="small"></ion-icon>
+                <p></p>
+              </ion-col>
+
+              <ion-col size="3">
+                <ion-icon name="time" size="small"></ion-icon>
+                <p></p>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="3">
+                <p>Return</p>
+              </ion-col>
+              <ion-col size="5">
+                <ion-icon name="calendar" size="small"></ion-icon>
+                <p></p>
+              </ion-col>
+
+              <ion-col size="3">
+                <ion-icon name="time" size="small"></ion-icon>
+                <p></p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="3">
+                <p>MYR</p>
+              </ion-col>
+              <ion-col size="5">
+                <ion-icon name="cash" size="small"></ion-icon>
+                <p></p>
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+        </div>
+      </ion-card-content>
+</ion-card>
+
+  <!-- new trip card -->
+  <ion-card>
+    <ion-item  color="success">
+      <ion-label (click)="go()">Wanda's Tracking Trip</ion-label>
+       <!-- Location of the trip, hyperlink to the location page -->
+       <ion-col align-self-baseline>
+
+        <div class="ion-text-end">
+          <a><ion-icon name="pin"></ion-icon> Bukit Senaling</a>
+        </div>
+      </ion-col>
+    </ion-item>
+    <ion-card-content>
+        <!-- Trips basic info: trip name, date and time -->
+        <div>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="3">
+                <p>Departure</p>
+              </ion-col>
+              <ion-col size="5">
+                <ion-icon name="calendar" size="small"></ion-icon>
+                <p></p>
+              </ion-col>
+
+              <ion-col size="3">
+                <ion-icon name="time" size="small"></ion-icon>
+                <p></p>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="3">
+                <p>Return</p>
+              </ion-col>
+              <ion-col size="5">
+                <ion-icon name="calendar" size="small"></ion-icon>
+                <p></p>
+              </ion-col>
+
+              <ion-col size="3">
+                <ion-icon name="time" size="small"></ion-icon>
+                <p></p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="3">
+                <p>MYR</p>
+              </ion-col>
+              <ion-col size="5">
+                <ion-icon name="cash" size="small"></ion-icon>
+                <p></p>
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+        </div>
+      </ion-card-content>
+</ion-card>
