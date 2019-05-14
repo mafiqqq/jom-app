@@ -1,6 +1,8 @@
 {
   "name": "jom-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "1fdac565"
 }
