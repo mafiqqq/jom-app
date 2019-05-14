@@ -33,11 +33,11 @@ firebase.initializeApp(environment.firebase);
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireAuthModule,
+    AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
-    
   ],
   providers: [
     StatusBar,

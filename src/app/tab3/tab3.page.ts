@@ -27,6 +27,7 @@ export class Tab3Page implements OnInit{
       form.resetForm();
     }
     this.service.formData = {
+      id: null,
       trip_type: '',
       trip_name: '',
       trip_dest: '',
@@ -42,7 +43,7 @@ export class Tab3Page implements OnInit{
   }
   
   go(){
-    this.router.navigateByUrl('/trip-created');
+    this.router.navigateByUrl('/triplist');
   }
 
   createTrip(form: NgForm){
