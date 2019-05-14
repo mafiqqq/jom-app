@@ -37,7 +37,6 @@ firebase.initializeApp(environment.firebase);
     AngularFirestoreModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
-    
   ],
   providers: [
     StatusBar,
