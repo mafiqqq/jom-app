@@ -11,6 +11,7 @@ const routes: Routes = [
 
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+<<<<<<< HEAD
   { path: '', redirectTo: 'login', pathMatch:'full'},
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
 //  { path: 'trip-created', loadChildren: './trip-created/trip-created.module#TripCreatedPageModule' },
@@ -19,6 +20,14 @@ const routes: Routes = [
   { path: 'edit-profile', loadChildren: './edit-profile/edit-profile.module#EditProfilePageModule' },
   { path: 'gallery', loadChildren: './gallery/gallery.module#GalleryPageModule' },
   { path: 'upload-photo', loadChildren: './upload-photo/upload-photo.module#UploadPhotoPageModule' },
+=======
+  { path: 'edit-profile', loadChildren: './edit-profile/edit-profile.module#EditProfilePageModule' },
+  { path: 'gallery', loadChildren: './gallery/gallery.module#GalleryPageModule' },
+  { path: 'upload-photo', loadChildren: './upload-photo/upload-photo.module#UploadPhotoPageModule' },
+  { path: 'joindetails', loadChildren: './tab1/joindetails/joindetails.module#JoindetailsPageModule' },
+  { path: 'payment', loadChildren: './tab1/payment/payment.module#PaymentPageModule' },
+  { path: 'jointrip', loadChildren: './tab1/jointrip/jointrip.module#JointripPageModule' },
+>>>>>>> 288ae734b5fac1656d8635dfe142ffec9817b86a
   { path: '', redirectTo: 'login', pathMatch:'full'},
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'trip-created', loadChildren: './tab3/trip-created/trip-created.module#TripCreatedPageModule' },

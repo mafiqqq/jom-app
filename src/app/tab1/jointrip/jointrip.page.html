@@ -1,0 +1,79 @@
+
+  <ion-header >
+    <ion-toolbar color="success">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref=#>
+        </ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        Ali's Hiking Trip
+      </ion-title>
+    </ion-toolbar>
+  </ion-header >
+  
+  <ion-content>
+    <ion-grid>
+      <ion-icon name="pin"></ion-icon>
+      <ion-label>Bukit Broga</ion-label>
+      <ion-avatar slot="end">
+        <!-- avatar img -->
+      </ion-avatar>
+      <ion-item>
+        <ion-label slot="start">Ali's Hiking Trip</ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Departure:</ion-label>
+        <ion-input disabled="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Return</ion-label>
+        <ion-input disabled="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="cash"></ion-icon>
+        <ion-label>MYR</ion-label>
+        <ion-input disabled="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="people"></ion-icon>
+        <ion-input></ion-input>
+        <ion-label disabled="true">Pax</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person-add"></ion-icon>
+        <ion-input></ion-input>
+        <ion-label disabled="true">seats available</ion-label>
+      </ion-item>
+     
+       <!--Trip details--> 
+    <ion-card>
+      <ion-item color="success">
+        <ion-label>Trip Details</ion-label><br>
+      </ion-item>
+        <ion-list>
+          <ion-item>
+            <ion-label>Food is provided</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Accomodation provided</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Own transportation</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Tour guide is provided</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>RV Points : RnR Dengkil</ion-label>
+          </ion-item>
+        </ion-list>
+    </ion-card>
+  
+   
+        <ion-button id="join" (click)="go()" color="success" >Join</ion-button>
+  
+    </ion-grid>
+  </ion-content>
