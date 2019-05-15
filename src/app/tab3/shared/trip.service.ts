@@ -8,4 +8,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class TripService {
   formData: Trip;
   constructor(private firestore: AngularFirestore) { }
+
+  getTrips(){
+    return this.firestore.collection('trips').snapshotChanges();
+  }
 }
