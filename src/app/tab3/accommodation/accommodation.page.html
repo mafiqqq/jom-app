@@ -9,8 +9,8 @@ information of the accommodation
     <ion-buttons slot="start">
       <ion-back-button defaultHref=#>
       </ion-back-button>
-      </ion-buttons>
-      <h3>Accommodation</h3>
+    </ion-buttons>
+    <h3>Accommodation</h3>
   </ion-toolbar>
 </ion-header>
 
@@ -42,17 +42,23 @@ information of the accommodation
           the accommodation
           The variable name for this text field is "expiry_date"-->
         <ion-item>
-          <ion-label>Expiry Date</ion-label>
+          <ion-label>Reply latest before</ion-label>
           <ion-datetime name="expiry_date" display-format="DD-MM-YYYY"></ion-datetime>
         </ion-item>
 
+        <!--Text field for Accommodation Desctiption-->
+        <ion-item>
+          <ion-textarea placeholder="Accommodation Description"></ion-textarea>
+        </ion-item>
+        
         <br>
         <br>
 
         <!--This is the save button 
           The variable name for this button is "save"-->
-          <a routerLink="/accommodation1">
-        <ion-button name="save" size="large" type="submit" expand="block">Save</ion-button></a>
+        <a routerLink="/accommodation1">
+          <ion-button name="save" size="large" type="submit" expand="block">Save</ion-button>
+        </a>
 
       </ion-col>
     </ion-row>
