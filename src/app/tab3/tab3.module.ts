@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, FormGroup ,Validators, PatternValidator, FormControl} from '@angular/forms';
 import { Tab3Page } from './tab3.page';
-import { TripService } from './shared/trip.service';
+import { TripService } from '../shared/trip.service';
 
 @NgModule({
   imports: [

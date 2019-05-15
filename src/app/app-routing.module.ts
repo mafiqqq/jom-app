@@ -29,7 +29,11 @@ const routes: Routes = [
   { path: 'fnb1', loadChildren: './tab3/fnb1/fnb1.module#Fnb1PageModule' },
   { path: 'fnb2', loadChildren: './tab3/fnb2/fnb2.module#Fnb2PageModule' },
   { path: 'fnb3', loadChildren: './tab3/fnb3/fnb3.module#Fnb3PageModule' },
-  { path: 'triplist', loadChildren: './tab3/triplist/triplist.module#TriplistPageModule' }
+  { path: 'triplist', loadChildren: './tab3/triplist/triplist.module#TriplistPageModule' },
+  { path: 'edittrip', loadChildren: './tab1/edittrip/edittrip.module#EdittripPageModule' },  { path: 'member-list-participant', loadChildren: './tab3/member-list-participant/member-list-participant.module#MemberListParticipantPageModule' }
+
+
+
 
 
 ];

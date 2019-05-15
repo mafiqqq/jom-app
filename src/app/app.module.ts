@@ -19,7 +19,7 @@ import * as firebase from 'firebase';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { TripService } from './tab3/shared/trip.service';
+import { TripService } from './shared/trip.service';
 
 
 firebase.initializeApp(environment.firebase);

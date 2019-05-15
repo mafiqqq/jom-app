@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { TripService } from './shared/trip.service';
+import { TripService } from '../shared/trip.service';
 import { ToastrService } from 'ngx-toastr';
+import { AuthenticateService } from '../services/authentication.service';
+import { Navigation } from 'selenium-webdriver';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab3',
@@ -14,7 +17,9 @@ export class Tab3Page implements OnInit{
  constructor(private router: Router,
   private firestore: AngularFirestore,
   private service: TripService,
-  private toastr: ToastrService) {}
+  private toastr: ToastrService,
+  private emailservice: AuthenticateService,
+  private navCtrl: NavController) {}
 
 
   ngOnInit() {
@@ -27,12 +32,18 @@ export class Tab3Page implements OnInit{
       form.resetForm();
     }
     this.service.formData = {
-      id: null,
+      email: this.emailservice.userDetails().email,
+      tripid: this.firestore.createId(),
+      account_name: '',
+      account_no: '',
+      bank: '',
       trip_type: '',
       trip_name: '',
       trip_dest: '',
-      end_date_time: '',
-      start_date_time: '',
+      end_date: '',
+      end_time: '',
+      start_date: '',
+      start_time: '',
       pax: '',
       fee: '',
       num_day: '',
@@ -43,7 +54,7 @@ export class Tab3Page implements OnInit{
   }
   
   go(){
-    this.router.navigateByUrl('/triplist');
+    this.router.navigateByUrl('/tabs');
   }
 
   createTrip(form: NgForm){
@@ -52,7 +63,5 @@ export class Tab3Page implements OnInit{
     this.resetForm();
     this.toastr.success('Created Successfully','Create Trip');
     this.go();
-  }
-
-  
+  }  
 }

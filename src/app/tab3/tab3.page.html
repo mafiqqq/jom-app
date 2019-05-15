@@ -12,7 +12,8 @@
 
 <ion-content>
   <form #form="ngForm" (submit)="createTrip(form)">
-    
+  <input type ="hidden" name="email" #email="ngModel" [(ngModel)]="service.formData.email">
+  <input type ="hidden" name="tripid" #tripid="ngModel" [(ngModel)]="service.formData.tripid">
     <!-- {{ createTripForm.value | json }} -->
     <ion-grid>
       <ion-list>
@@ -42,7 +43,14 @@
         <ion-col>
           <ion-item>
             <ion-icon name="calendar"></ion-icon>
-            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="start_date_time" placeholder="Start Date & Time" #start_date_time="ngModel" [(ngModel)]="service.formData.start_date_time" >
+            <ion-datetime displayFormat="D MMM YYYY" max="2070" name="start_date" placeholder="Start Date" #start_date_time="ngModel" [(ngModel)]="service.formData.start_date" >
+            </ion-datetime>
+          </ion-item>
+        </ion-col> 
+        <ion-col> 
+          <ion-item>
+            <ion-icon name="time" size="small"></ion-icon>
+            <ion-datetime displayFormat="h:mm a"  name="start_time" placeholder="Start Time" #start_date_time="ngModel" [(ngModel)]="service.formData.start_time" >
             </ion-datetime>
           </ion-item>
         </ion-col>
@@ -52,7 +60,14 @@
         <ion-col>
           <ion-item>
             <ion-icon name="calendar"></ion-icon>
-            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="end_date_time" placeholder="End Date & Time" #end_date_time="ngModel" [(ngModel)]="service.formData.end_date_time" >
+            <ion-datetime displayFormat="D MMM YYYY" max="2070" name="end_date" placeholder="End Date" #end_date_time="ngModel" [(ngModel)]="service.formData.end_date" >
+            </ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-icon name="time" size="small"></ion-icon>
+            <ion-datetime displayFormat="h:mm a"  name="end_time" placeholder="End Time" #end_date_time="ngModel" [(ngModel)]="service.formData.end_time" >
             </ion-datetime>
           </ion-item>
         </ion-col>
@@ -62,7 +77,7 @@
         <ion-col>
           <ion-item>
             <ion-icon name="people"></ion-icon>
-            <ion-input name="pax" #pax="ngModel" [(ngModel)]="service.formData.pax" placeholder="Pax"></ion-input>
+            <ion-input name="pax" #pax="ngModel" [(ngModel)]="service.formData.pax" placeholder="Max Pax"></ion-input>
           </ion-item>
         </ion-col>
 
