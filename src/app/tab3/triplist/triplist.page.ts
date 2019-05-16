@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { TripService } from '../shared/trip.service';
+import { TripService } from '../../shared/trip.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ToastrService } from 'ngx-toastr';
-import { Trip } from '../shared/trip.model';
+import { Trip } from '../../shared/trip.model';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
@@ -23,7 +23,7 @@ export class TriplistPage implements OnInit {
       this.service.getTrips().subscribe(actionArray =>{
         this.list = actionArray.map(item =>{
           return {
-            id: item.payload.doc.id,
+            tripid: item.payload.doc.id,
             ...item.payload.doc.data()
           } as Trip;
         })

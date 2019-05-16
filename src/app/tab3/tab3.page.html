@@ -12,13 +12,13 @@
 
 <ion-content>
   <form #form="ngForm" (submit)="createTrip(form)">
-    
+  <input type ="hidden" name="email" #email="ngModel" [(ngModel)]="service.formData.email">
+  <input type ="hidden" name="tripid" #tripid="ngModel" [(ngModel)]="service.formData.tripid">
     <!-- {{ createTripForm.value | json }} -->
     <ion-grid>
-
       <ion-list>
         <ion-item>
-          <ion-select name="trip_type" #trip_type="ngModel" [(ngModel)]="service.formData.trip_type" class="form-control" placeholder="Trip Type">
+          <ion-select style="max-width:100%; width:100%" name="trip_type" #trip_type="ngModel" [(ngModel)]="service.formData.trip_type" placeholder="Trip Type">%
             <!-- variables of trip type -->
             <ion-select-option name="trip_type" value="hiking">Hiking</ion-select-option>
             <ion-select-option name="trip_type" value="campsite">Campsite</ion-select-option>
@@ -30,12 +30,12 @@
 
       <!-- variable of trip name-->
       <ion-item>
-        <ion-input name="trip_name" #trip_name="ngModel" [(ngModel)]="service.formData.trip_name" class="form-control" placeholder="Trip Name"></ion-input>
+        <ion-input name="trip_name" #trip_name="ngModel" [(ngModel)]="service.formData.trip_name" placeholder="Trip Name"></ion-input>
       </ion-item>
 
       <ion-item>
         <!-- variable of trip destination-->
-        <ion-input name="trip_dest" #trip_dest="ngModel" [(ngModel)]="service.formData.trip_dest" class="form-control" placeholder="Trip Destination"></ion-input>
+        <ion-input name="trip_dest" #trip_dest="ngModel" [(ngModel)]="service.formData.trip_dest" placeholder="Trip Destination"></ion-input>
         <!-- suggest suitable location -->
       </ion-item>
 
@@ -43,7 +43,14 @@
         <ion-col>
           <ion-item>
             <ion-icon name="calendar"></ion-icon>
-            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="start_date_time" placeholder="Start Date & Time" #start_date_time="ngModel" [(ngModel)]="service.formData.start_date_time" class="form-control">
+            <ion-datetime displayFormat="D MMM YYYY" max="2070" name="start_date" placeholder="Start Date" #start_date_time="ngModel" [(ngModel)]="service.formData.start_date" >
+            </ion-datetime>
+          </ion-item>
+        </ion-col> 
+        <ion-col> 
+          <ion-item>
+            <ion-icon name="time" size="small"></ion-icon>
+            <ion-datetime displayFormat="h:mm a"  name="start_time" placeholder="Start Time" #start_date_time="ngModel" [(ngModel)]="service.formData.start_time" >
             </ion-datetime>
           </ion-item>
         </ion-col>
@@ -53,7 +60,14 @@
         <ion-col>
           <ion-item>
             <ion-icon name="calendar"></ion-icon>
-            <ion-datetime displayFormat="D MMM YYYY h:mm a" max="2070" name="end_date_time" placeholder="End Date & Time" #end_date_time="ngModel" [(ngModel)]="service.formData.end_date_time" class="form-control">
+            <ion-datetime displayFormat="D MMM YYYY" max="2070" name="end_date" placeholder="End Date" #end_date_time="ngModel" [(ngModel)]="service.formData.end_date" >
+            </ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-icon name="time" size="small"></ion-icon>
+            <ion-datetime displayFormat="h:mm a"  name="end_time" placeholder="End Time" #end_date_time="ngModel" [(ngModel)]="service.formData.end_time" >
             </ion-datetime>
           </ion-item>
         </ion-col>
@@ -63,7 +77,7 @@
         <ion-col>
           <ion-item>
             <ion-icon name="people"></ion-icon>
-            <ion-input name="pax" #pax="ngModel" [(ngModel)]="service.formData.pax" class="form-control" placeholder="Pax"></ion-input>
+            <ion-input name="pax" #pax="ngModel" [(ngModel)]="service.formData.pax" placeholder="Max Pax"></ion-input>
           </ion-item>
         </ion-col>
 
@@ -71,7 +85,7 @@
         <ion-col>
           <ion-item>
             <ion-icon name="cash"></ion-icon>
-              <ion-input name="fee" #fee="ngModel" [(ngModel)]="service.formData.fee" class="form-control" placeholder="MYR"></ion-input>
+              <ion-input name="fee" #fee="ngModel" [(ngModel)]="service.formData.fee" placeholder="MYR"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -80,32 +94,88 @@
         <ion-col>
           <ion-item>
             <ion-icon name="bed"></ion-icon>
-              <ion-input name="num_day" #num_day="ngModel" [(ngModel)]="service.formData.num_day" class="form-control" placeholder="Days / Nights"></ion-input>
+              <ion-input name="num_day" #num_day="ngModel" [(ngModel)]="service.formData.num_day" placeholder="Days / Nights"></ion-input>
           </ion-item>
         </ion-col>
 
         <ion-col>
           <ion-item>
             <ion-icon name="add-circle-outline"></ion-icon>
-            <ion-input name="rv" #rv="ngModel" [(ngModel)]="service.formData.rv" class="form-control" placeholder="RV"></ion-input>
+            <ion-input name="rv" #rv="ngModel" [(ngModel)]="service.formData.rv" placeholder="RV"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
+      <ion-card>
+               
+          <ion-card-header color="primary">
+              <ion-card-title>Payment Details</ion-card-title>
+          </ion-card-header>
+      
+          <ion-card-content>
+            <ion-item>
+            <ion-label position="floating">Account's holder name</ion-label>
+              <ion-input name="account_name" #account_name="ngModel" [(ngModel)]="service.formData.account_name" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Account number</ion-label>
+              <ion-input name="account_no" #account_no="ngModel" [(ngModel)]="service.formData.account_no" ></ion-input>
+            </ion-item>
+           
+              <ion-list>
+                  <ion-item>   
+                  <ion-label>Bank</ion-label>        
+                    <ion-select name="bank" #bank="ngModel" [(ngModel)]="service.formData.bank" >
+                      <ion-select-option name="bank" value="Affin">	Affin Bank Berhad</ion-select-option>
+                      <ion-select-option name="bank" value="Alliance">Alliance Bank Malaysia Berhad</ion-select-option>
+                      <ion-select-option name="bank" value="AmBank">AmBank (M) Berhad</ion-select-option>
+                      <ion-select-option name="bank" value="BNP"> BNP Paribas Malaysia Berhad</ion-select-option>
+                      <ion-select-option name="bank" value="Bangkok">	Bangkok Bank Berhad</ion-select-option>
+                      <ion-select-option name="bank" value="America">	Bank of America Malaysia Berhad</ion-select-option>
+                      <ion-select-option name="bank" value="China"> 	Bank of China (Malaysia) Berhad</ion-select-option>
+                      <ion-select-option name="bank" value="CIMB">	CIMB Bank Berhad </ion-select-option>
+                      <ion-select-option name="bank" value="ChinaConstr">	China Construction Bank (Malaysia) Berhad</ion-select-option>
+                      <ion-select-option name="bank" value="Citibank">	Citibank Berhad</ion-select-option>
+                      <ion-select-option name="bank" value="Deutsche">	Deutsche Bank (Malaysia) Berhad </ion-select-option>
+                      <ion-select-option name="bank" value="HSBC"> HSBC Bank Malaysia Berhad	 </ion-select-option>
+                      <ion-select-option name="bank" value="HongLeong"> Hong Leong Bank Berhad </ion-select-option>
+                      <ion-select-option name="bank" value="IndiaInt"> India International Bank (Malaysia) Berhad	 </ion-select-option>
+                      <ion-select-option name="bank" value="IndComm"> 	Industrial and Commercial Bank of China (Malaysia) Berhad	 </ion-select-option>
+                      <ion-select-option name="bank" value="Morgan">	J.P. Morgan Chase Bank Berhad	 </ion-select-option>
+                      <ion-select-option name="bank" value="MUFG">	MUFG Bank (Malaysia) Berhad</ion-select-option>
+                      <ion-select-option name="bank" value="Malayan"> 	Malayan Banking Berhad	</ion-select-option>
+                      <ion-select-option name="bank" value="Mizuho"> Mizuho Bank (Malaysia) Berhad	</ion-select-option>
+                      <ion-select-option name="bank" value="OCBC"> OCBC Bank (Malaysia) Berhad	</ion-select-option>
+                      <ion-select-option name="bank" value="Public"> Public Bank Berhad	</ion-select-option>
+                      <ion-select-option name="bank" value="RHB"> 	RHB Bank Berhad	</ion-select-option>
+                      <ion-select-option name="bank" value="StandardChartered"> 	Standard Chartered Bank Malaysia Berhad 	</ion-select-option>
+                      <ion-select-option name="bank" value="Sumitomo"> 	Sumitomo Mitsui Banking Corporation Malaysia Berhad	</ion-select-option>
+                      <ion-select-option name="bank" value="NovaScotia"> 	The Bank of Nova Scotia Berhad</ion-select-option>
+                      <ion-select-option name="bank" value="UnitedOverseas"> United Overseas Bank (Malaysia) Bhd.</ion-select-option>
+        
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+          </ion-card-content>
+        </ion-card>
 
-      <ion-item>
-        <ion-textarea rows="3" cols="50" placeholder="Enter trip details ..." name="trip_details" #trip_details="ngModel" [(ngModel)]="service.formData.trip_details" class="form-control">
-        </ion-textarea>
-      </ion-item>
+        <ion-card> 
+        
+            <ion-card-header color="primary"> 
+              <ion-card-title>Trip Details</ion-card-title>
+              </ion-card-header>
+            
+            <ion-card-content>
+                <ion-item>
+                    <ion-textarea rows="3" cols="50" placeholder="Enter trip details ..." name="trip_details" #trip_details="ngModel" [(ngModel)]="service.formData.trip_details" >
+                    </ion-textarea>
+                  </ion-item>
+            </ion-card-content>
+          </ion-card>
 
-      <ion-item>
-        <ion-textarea rows="3" cols="50" placeholder="Payment details ..." name="payment_details" #payment_details="ngModel" [(ngModel)]="service.formData.payment_details" class="form-control">
-        </ion-textarea>
-      </ion-item>
-
-
+      
       <ion-row>
         <ion-col>
-          <ion-button href="#">Cancel</ion-button>
+          <ion-button href="#" >Cancel</ion-button>
         </ion-col>
 
         <ion-col offset="4">

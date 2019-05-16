@@ -24,13 +24,14 @@ const routes: Routes = [
   { path: 'member-list', loadChildren: './tab3/member-list/member-list.module#MemberListPageModule' },
   { path: 'accommodation', loadChildren: './tab3/accommodation/accommodation.module#AccommodationPageModule' },
   { path: 'accommodation1', loadChildren: './tab3/accommodation1/accommodation1.module#Accommodation1PageModule' },
-  //{ path: 'ratinf', loadChildren: './ratinf/ratinf.module#RatinfPageModule' },
+  { path: 'ratinf', loadChildren: './ratinf/ratinf.module#RatinfPageModule' },
   { path: 'fnb', loadChildren: './tab3/fnb/fnb.module#FnbPageModule' },
   { path: 'fnb1', loadChildren: './tab3/fnb1/fnb1.module#Fnb1PageModule' },
   { path: 'fnb2', loadChildren: './tab3/fnb2/fnb2.module#Fnb2PageModule' },
   { path: 'fnb3', loadChildren: './tab3/fnb3/fnb3.module#Fnb3PageModule' },
-  { path: 'triplist', loadChildren: './tab3/triplist/triplist.module#TriplistPageModule' }
-
+  { path: 'triplist', loadChildren: './tab3/triplist/triplist.module#TriplistPageModule' },
+  { path: 'edittrip', loadChildren: './tab1/edittrip/edittrip.module#EdittripPageModule' },
+  { path: 'member-list-participant', loadChildren: './tab3/member-list-participant/member-list-participant.module#MemberListParticipantPageModule' }
 
 ];
 @NgModule({
@@ -40,3 +41,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
