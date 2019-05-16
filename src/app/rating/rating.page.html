@@ -1,0 +1,92 @@
+<!--This is the rating page
+This rating page will be displayed to the trip joiner after the trip has finished-->
+
+<ion-header>
+  <ion-toolbar>
+    <div text-center>
+      <h3>Hope You Enjoyed Your Trip!</h3>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br><br>
+  <ion-card>
+    <ion-card-content>
+      <ion-list-header>
+        <!--The label with the variable name "location" displays the location that participant went-->
+        <p>How do you rate </p>
+        <ion-label name="location"></ion-label>
+      </ion-list-header>
+
+      <!--The stars rating-->
+      <div class="inline-block">
+        <ion-img style="width: 40px; height: 30px;" src="assets/star.png"></ion-img>
+      </div>
+
+      <div class="inline-block">
+        <ion-img style="width: 40px; height: 30px;" src="assets/star.png"></ion-img>
+      </div>
+
+      <div class="inline-block">
+        <ion-img style="width: 40px; height: 30px;" src="assets/star.png"></ion-img>
+      </div>
+
+      <div class="inline-block">
+        <ion-img style="width: 40px; height: 30px;" src="assets/star.png"></ion-img>
+      </div>
+
+      <div class="inline-block">
+        <ion-img style="width: 40px; height: 30px;" src="assets/star.png"></ion-img>
+      </div>
+
+      <!--This is the text field for the user to enter their comment-->
+      <ion-card>
+        <ion-card-content>
+          <ion-input placeholder="Add comment here..."></ion-input>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-list-header>
+        <!--The label with the variable name "creator_Name" displays the name of the event creator-->
+        <p>How do you rate </p>
+        <ion-label name="creator_Name"></ion-label>
+        <p> as your event creator?</p>
+        <ion-input></ion-input>
+      </ion-list-header>
+
+      <!--The stars rating-->
+      <div class="inline-block">
+        <ion-img style="width: 40px; height: 30px;" src="assets/star.png"></ion-img>
+      </div>
+
+      <div class="inline-block">
+        <ion-img style="width: 40px; height: 30px;" src="assets/star.png"></ion-img>
+      </div>
+
+      <div class="inline-block">
+        <ion-img style="width: 40px; height: 30px;" src="assets/star.png"></ion-img>
+      </div>
+
+      <div class="inline-block">
+        <ion-img style="width: 40px; height: 30px;" src="assets/star.png"></ion-img>
+      </div>
+
+      <div class="inline-block">
+        <ion-img style="width: 40px; height: 30px;" src="assets/star.png"></ion-img>
+      </div>
+
+    </ion-card-content>
+    <br>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col offset="6">
+        <ion-button (click)="pop()">Cancel</ion-button>
+        <ion-button>Post</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

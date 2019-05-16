@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
-  selector: 'app-member-list',
-  templateUrl: './member-list.page.html',
-  styleUrls: ['./member-list.page.scss'],
+  selector: 'app-member-list-participant',
+  templateUrl: './member-list-participant.page.html',
+  styleUrls: ['./member-list-participant.page.scss'],
 })
-export class MemberListPage implements OnInit {
+export class MemberListParticipantPage implements OnInit {
 
   public form = [
     { val: 'Pepperoni', isChecked: true },
@@ -20,3 +19,4 @@ export class MemberListPage implements OnInit {
   }
 
 }
+

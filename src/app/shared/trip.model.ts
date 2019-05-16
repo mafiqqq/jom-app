@@ -1,10 +1,16 @@
 export class Trip {
-    id: string;
+    email: string;
+    account_name: string;
+    account_no: string;
+    bank: string;
+    tripid: string;
     trip_type: string;
     trip_name: string;
     trip_dest: string;
-    end_date_time: string;
-    start_date_time: string;
+    end_date: string;
+    end_time: string;
+    start_time: string;
+    start_date: string;
     pax: string;
     fee: string;
     num_day: string;
