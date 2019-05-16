@@ -24,6 +24,7 @@ import { TripService } from './tab3/shared/trip.service';
 
 firebase.initializeApp(environment.firebase);
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

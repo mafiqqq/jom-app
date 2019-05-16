@@ -3,43 +3,20 @@
     <ion-title>
       JOM!
     </ion-title>
-    <ion-buttons slot="start" color="success">
+    <ion-buttons slot="start" color="primary">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
-  <!-- [START] Testing the dashboard and logout. UI Team can edit here-->
-  <ion-grid>
-    <ion-row>
-      <ion-col text-center>
-        Welcome to Dashboard!
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col text-center>
-        Your Registered EmailID : {{userEmail}}
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <ion-button (click)="logout()" color="success">Log Out</ion-button>
-  <ion-toolbar color="success">
-    <ion-title>Log out</ion-title>
-  </ion-toolbar>
 
 
-</ion-content>
-<!-- <ion-footer (click)="logout()">
-    
-</ion-footer> -->
+ 
+        <!-- Your Registered EmailID : {{userEmail}} -->
 
-<!-- [END] Testing ends here -->
 
 <ion-header>
-  <ion-toolbar color="success">
+  <ion-toolbar color="primary">
     <ion-title>
       Join Trip
     </ion-title>
@@ -62,12 +39,12 @@
                 </ion-item>
             </ion-list>      
           </ion-list-header>                
-          <ion-button id="search" color="success" >search</ion-button>
+          <ion-button id="search" color="primary" >search</ion-button>
         </ion-card>
 
      <!-- new trip card -->
   <ion-card>
-      <ion-item  color="success">
+      <ion-item  color="primary">
         <ion-label (click)="go()">Ali's Hiking Trip</ion-label>
          <!-- Location of the trip, hyperlink to the location page -->
          <ion-col align-self-baseline>
@@ -127,7 +104,7 @@
 
 <!-- new trip card -->
   <ion-card>
-      <ion-item  color="success">
+      <ion-item  color="primary">
         <ion-label (click)="go()">Fizah's Camping Trip</ion-label>
          <!-- Location of the trip, hyperlink to the location page -->
          <ion-col align-self-baseline>
@@ -187,7 +164,7 @@
 
   <!-- new trip card -->
   <ion-card>
-    <ion-item  color="success">
+    <ion-item  color="primary">
       <ion-label (click)="go()">Joseph's Kayaking Trip</ion-label>
        <!-- Location of the trip, hyperlink to the location page -->
        <ion-col align-self-baseline>
@@ -247,7 +224,7 @@
 
   <!-- new trip card -->
   <ion-card>
-    <ion-item  color="success">
+    <ion-item  color="primary">
       <ion-label (click)="go()">Wanda's Tracking Trip</ion-label>
        <!-- Location of the trip, hyperlink to the location page -->
        <ion-col align-self-baseline>

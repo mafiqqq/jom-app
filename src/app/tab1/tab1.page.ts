@@ -37,6 +37,7 @@ export class Tab1Page {
       console.log(error);
     })
   }
+  
   go(){
     // this.router.navigate(['jointrip']);
     this.navCtrl.navigateForward('/jointrip');
