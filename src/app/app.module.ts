@@ -21,6 +21,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { TripService } from './shared/trip.service';
 
+import { ImageProviderService } from './upload-photo/services/image-provider.service';
+import { Camera } from '@ionic-native/camera/ngx';
 
 firebase.initializeApp(environment.firebase);
 
@@ -42,10 +44,12 @@ firebase.initializeApp(environment.firebase);
     
   ],
   providers: [
+    ImageProviderService,
     StatusBar,
     TripService,
     SplashScreen,
     AuthenticateService,
+    Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

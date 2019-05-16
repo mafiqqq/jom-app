@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { UploadPhotoPage } from './upload-photo.page';
+import { ImageProviderService } from './services/image-provider.service';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [UploadPhotoPage]
+  declarations: [UploadPhotoPage],
+  providers: [ImageProviderService],
 })
 export class UploadPhotoPageModule {}
