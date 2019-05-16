@@ -1,4 +1,5 @@
 export class Trip {
+    id: string;
     trip_type: string;
     trip_name: string;
     trip_dest: string;

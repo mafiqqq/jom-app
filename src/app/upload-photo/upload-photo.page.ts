@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ImageProviderService } from './services/image-provider.service';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { AuthenticateService } from '../services/authentication.service';
+import { storage } from 'firebase';
 
 @Component({
   selector: 'app-upload-photo',
@@ -8,10 +12,64 @@ import { Router } from '@angular/router';
 })
 export class UploadPhotoPage implements OnInit {
 
-  constructor(private router: Router) { }
+  locationValue: string = "";
+  tripNameValue: string = "";
+
+  // debug purpose
+  errorMessage: string = "";
+
+  constructor(private router: Router,
+    private imageSrv: ImageProviderService,
+    private camera: Camera,
+    private auth: AuthenticateService) { }
+
+
+  image: any;
+  imageUrls:string[] = [];    
 
   ngOnInit() {
   }
+
+  downloadImageUrls() {
+    try {
+      this.imageUrls.push( this.imageSrv.getImage(this.auth.userDetails().uid).pop());
+      
+      // for (var i = 0; i < promiseList.length; i++) {
+      //   this.imageUrls = promiseList[i];
+      // }
+    } catch (e) {
+      // this.errorMessage = e;
+    }
+  }
+
+  display(){
+    storage().ref().child(this.imageUrls.pop()).getDownloadURL().then((url) => {
+      this.image = url;
+    });
+    console.log(this.image);
+  }
+
+
+
+  async getPhoto() {
+    try {
+      const options: CameraOptions = {
+        quality: 50,
+        destinationType: this.camera.DestinationType.DATA_URL,
+        sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+        saveToPhotoAlbum: false,
+        correctOrientation: true
+      }
+      const result = await this.camera.getPicture(options);
+      let base64Image = `data:image/jpeg;base64,${result}`;
+      this.errorMessage = this.imageSrv.uploadImage(base64Image, this.auth.userDetails().uid, this.locationValue, this.tripNameValue);
+    }
+    catch (e) {
+      this.errorMessage = e;
+    }
+
+  }
+
   gallery() {
     this.router.navigateByUrl('/gallery');
   }

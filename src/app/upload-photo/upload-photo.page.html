@@ -15,15 +15,23 @@
   <div class="photos"><ion-icon name="photos"></ion-icon></div>
 
   <!-- Enter location (loacation search like instagram) -->
-  <ion-item><ion-input placeholder="Location"></ion-input></ion-item>
+  <ion-item><ion-input placeholder="Location" type="text" id="location" [(ngModel)]="locationValue" ></ion-input></ion-item>
 
   <!-- Enter trip name -->
-  <ion-item><ion-input placeholder="Trip Name"></ion-input></ion-item>
+  <ion-item><ion-input placeholder="Trip Name" type="text" id="tripName" [(ngModel)]="tripNameValue" ></ion-input></ion-item>
   <div class="cancel-upload">
 
   <!-- Cancel to upload the photo and return to gallery page -->
   <ion-button color="light" (click)="gallery()">Cancel</ion-button>
   <!-- Upload photo button -->
-  <ion-button>Upload</ion-button>
+  <ion-button (click)="getPhoto()">Upload</ion-button>
   </div>
+
+  <!-- only for debug purpose -->
+  <label>{{errorMessage}}</label>
+  <ion-button (click)="downloadImageUrls()">TESTGETDATA</ion-button>
+  <ion-button (click)="display()">DISPLAY</ion-button>
+  <label>{{ image }}</label>
+  <img src='{{ image }}'>
+
 </ion-content>
