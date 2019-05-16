@@ -16,19 +16,17 @@
     <h5>Miss Nina</h5>
 
     <!-- Star Rating (icon only) -->
-    <ion-row>
-      <ion-icon name="star" color="yellow"></ion-icon>
-      <ion-icon name="star" color="yellow"></ion-icon>
-      <ion-icon name="star" color="yellow"></ion-icon>
-      <ion-icon name="star" color="yellow"></ion-icon>
-      <ion-icon name="star" color="yellow"></ion-icon>
-    </ion-row>
+    <div style="text-align:center">
+      <rating [rate]="rate"
+      readonly="false" 
+      size="default" 
+      (rateChange)="onRateChange($event)">
+</rating>
+  </div>
     <!-- Bio -->
     <p>A wanderlust</p>
   </div>
   <div class="profile-info">
-    <p><b>Nina Joseph</b></p>
-    <p>Kuala Lumpur | Hiking enthusiast | Swimmer</p>
     <ion-button size="small" (click)="edit()">Edit Profile</ion-button>
   </div>
 
@@ -125,6 +123,70 @@
                         <a>
                           <ion-icon name="pin"></ion-icon>
                           Bukit Broga
+                        </a>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+
+              </ion-item-divider>
+
+              <!-- Trips basic info: trip name, date and time -->
+              <div>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size="3">
+                      <p>Departure</p>
+                    </ion-col>
+                    <ion-col size="5">
+                      <ion-icon name="calendar" size="small"></ion-icon>
+                      <p>30 March 2019</p>
+                    </ion-col>
+
+                    <ion-col size="3">
+                      <ion-icon name="time" size="small"></ion-icon>
+                      <p>2:00am</p>
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-row>
+                    <ion-col size="3">
+                      <p>Return</p>
+                    </ion-col>
+                    <ion-col size="5">
+                      <ion-icon name="calendar" size="small"></ion-icon>
+                      <p>31 March 2019</p>
+                    </ion-col>
+
+                    <ion-col size="3">
+                      <ion-icon name="time" size="small"></ion-icon>
+                      <p>6:00pm</p>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+            </ion-card>
+          </ion-item>
+
+          <br>
+
+
+         <!-- upcoming trips example 2 -->
+         <ion-item lines="none">
+            <ion-card class="trips-card">
+              <ion-item-divider>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                      <h5>Alice Waterfall Trip</h5>
+                    </ion-col>
+
+                    <!-- Location of the trip, hyperlink to the location page -->
+                    <ion-col align-self-baseline>
+                      <div class="ion-text-end">
+                        <a>
+                          <ion-icon name="pin"></ion-icon>
+                          Serdang
                         </a>
                       </div>
                     </ion-col>

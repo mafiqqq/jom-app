@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button (click)="gallery()">
-      </ion-back-button>
+      <ion-button (click)="gallery()">Cancel
+      </ion-button>
     </ion-buttons>
     <ion-title>
       Upload Photo
@@ -12,18 +12,39 @@
 
 <ion-content padding>
   <!-- Section display photos from phone -->
-  <div class="photos"><ion-icon name="photos"></ion-icon></div>
+  <div class="photos">
+    <ion-icon name="photos"></ion-icon>
+  </div>
 
   <!-- Enter location (loacation search like instagram) -->
-  <ion-item><ion-input placeholder="Location"></ion-input></ion-item>
+  <ion-item>
+    <ion-label>Add Location</ion-label>
+    <ionic-selectable
+    [(ngModel)]="location" 
+    [items]="locations" 
+    itemValueField="id" 
+    itemTextField="name"
+    [canSearch]="true"
+    (onChange)="userChanged($event)">
+    </ionic-selectable>
+  </ion-item>
+
 
   <!-- Enter trip name -->
-  <ion-item><ion-input placeholder="Trip Name"></ion-input></ion-item>
-  <div class="cancel-upload">
+  <ion-item>
+    <ion-label>Add Trip Title</ion-label>
+    <ionic-selectable
+    [(ngModel)]="location" 
+    [items]="locations" 
+    itemValueField="id" 
+    itemTextField="name"
+    [canSearch]="true"
+    (onChange)="userChanged($event)">
+    </ionic-selectable>
+  </ion-item>
 
-  <!-- Cancel to upload the photo and return to gallery page -->
-  <ion-button color="light" (click)="gallery()">Cancel</ion-button>
-  <!-- Upload photo button -->
-  <ion-button>Upload</ion-button>
+  <div class="upload">
+    <!-- Upload photo button -->
+    <ion-button>Upload</ion-button>
   </div>
 </ion-content>

@@ -21,8 +21,11 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { TripService } from './tab3/shared/trip.service';
 
+import { IonicRatingModule } from 'ionic4-rating';
+import { IonicSelectableModule } from 'ionic-selectable';
 
 firebase.initializeApp(environment.firebase);
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,8 +39,9 @@ firebase.initializeApp(environment.firebase);
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
-    
+    ToastrModule.forRoot(),
+    IonicRatingModule,
+    IonicSelectableModule    
   ],
   providers: [
     StatusBar,
