@@ -16,13 +16,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
  
 import * as firebase from 'firebase';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { TripService } from './tab3/shared/trip.service';
+import { TripService } from './shared/trip.service';
 
 import { IonicRatingModule } from 'ionic4-rating';
 import { IonicSelectableModule } from 'ionic-selectable';
+import { ImageProviderService } from './upload-photo/services/image-provider.service';
+import { Camera } from '@ionic-native/camera/ngx';
 
 firebase.initializeApp(environment.firebase);
 
@@ -35,6 +37,7 @@ firebase.initializeApp(environment.firebase);
     IonicModule.forRoot(), 
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
@@ -44,10 +47,12 @@ firebase.initializeApp(environment.firebase);
     IonicSelectableModule    
   ],
   providers: [
+    ImageProviderService,
     StatusBar,
     TripService,
     SplashScreen,
     AuthenticateService,
+    Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

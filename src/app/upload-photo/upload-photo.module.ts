@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { UploadPhotoPage } from './upload-photo.page';
 import { IonicSelectableModule } from 'ionic-selectable';
+import { ImageProviderService } from './services/image-provider.service';
+
 const routes: Routes = [
   {
     path: '',
@@ -23,6 +25,7 @@ const routes: Routes = [
     IonicSelectableModule
     
   ],
-  declarations: [UploadPhotoPage]
+  declarations: [UploadPhotoPage],
+  providers: [ImageProviderService],
 })
 export class UploadPhotoPageModule {}

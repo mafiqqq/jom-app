@@ -45,6 +45,14 @@
 
   <div class="upload">
     <!-- Upload photo button -->
-    <ion-button>Upload</ion-button>
+    <ion-button (click)="getPhoto()">Upload</ion-button>
   </div>
+
+  <!-- only for debug purpose -->
+  <label>{{errorMessage}}</label>
+  <ion-button (click)="downloadImageUrls()">TESTGETDATA</ion-button>
+  <ion-button (click)="display()">DISPLAY</ion-button>
+  <label>{{ image }}</label>
+  <img src='{{ image }}'>
+
 </ion-content>
