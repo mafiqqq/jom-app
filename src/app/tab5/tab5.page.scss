@@ -95,3 +95,38 @@ ion-img{
 .trips-card h5{
     margin:0;
 }
+
+
+@media (min-width: 0px) {
+    .images {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 420px) {
+    .images {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 720px) {
+    .images {
+        column-count: 4;
+    }
+}
+
+.one-image {
+    margin: 0;
+    padding: 0;
+    -webkit-column-break-inside: avoid;
+        -moz-column-break-inside: avoid;
+         -ms-column-break-inside: avoid;
+               page-break-inside: avoid;
+                    break-inside: avoid;
+}
+rating {
+    ion-icon {
+        font-size: 10px;
+    }
+    width: 20px;
+}

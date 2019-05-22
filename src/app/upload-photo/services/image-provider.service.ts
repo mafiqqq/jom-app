@@ -6,24 +6,27 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
   providedIn: 'root'
 })
 export class ImageProviderService {
+  images: any[];
 
   constructor(
     private firestore: AngularFirestore) { }
 
   getImage(userId: string) {
-
-    var list:string[] = [];
-    let photoRef = this.firestore.collection('PhotoManagement', ref => ref.where('uid', '==', userId).where('visible', '==', true));
-    photoRef.get().forEach(function (querySnapshot) {
-      querySnapshot.forEach(function (doc) {
-
-        var name:string = userId + '/' + doc.get('imageName');
-        list.push(name);
-        console.log(list);
+    try {
+      let ref = this.firestore.collection('PhotoManagement');
+      ref.ref.where('uid', '==', userId).where('visible', '==', true).get().then((_snapshot: any)=>{
+        var result = [];
+        _snapshot.forEach((_childSnapshot) => {
+          // var element = _childSnapshot;
+          firebase.storage().ref().child(userId + '/' + _childSnapshot.get('imageName')).getDownloadURL().then((url)=>{
+          result.push(url); 
+          });       
+        });
+        this.images = result;
       })
-    })
-    console.log(list);
-    return list;
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   // not complete

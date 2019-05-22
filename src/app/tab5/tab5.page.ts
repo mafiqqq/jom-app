@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { Router } from '@angular/router';
+import { ImageProviderService } from '../upload-photo/services/image-provider.service';
+import { AuthenticateService } from '../services/authentication.service';
 
 
 @Component({
@@ -9,10 +11,23 @@ import { Router } from '@angular/router';
 })
 export class Tab5Page implements OnInit {
 
-  constructor(private router: Router) { }
+  images: any[];
+  userId = this.auth.userDetails().uid;
+
+  constructor(private router: Router,
+    private imageSrv: ImageProviderService,
+    private auth: AuthenticateService) {
+  }
 
   ngOnInit() {
+    this.downloadImageUrls();
   }
+
+  downloadImageUrls() {
+    this.images = this.imageSrv.images;
+    console.log(this.images);
+  }
+
   edit() {
     this.router.navigateByUrl('/edit-profile');
   }

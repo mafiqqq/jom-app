@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { NavController } from '@ionic/angular';
 import { AuthenticateService } from '../services/authentication.service';
+import { ImageProviderService } from '../upload-photo/services/image-provider.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginPage implements OnInit {
 
     private navCtrl: NavController,
     private authService: AuthenticateService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private imageSrv: ImageProviderService
 
   ) { }
 
@@ -46,20 +48,23 @@ export class LoginPage implements OnInit {
       { type: 'minlength', message: 'Password must be at least 5 characters long.' }
     ]
   };
- 
 
-  loginUser(value){
+
+  loginUser(value) {
     this.authService.loginUser(value)
-    .then(res => {
-      console.log(res);
-      this.errorMessage = "";
-      this.navCtrl.navigateForward('/tabs');
-    }, err => {
-      this.errorMessage = err.message;
-    })
+      .then(res => {
+        console.log(res);
+        this.errorMessage = "";
+        this.navCtrl.navigateForward('/tabs');
+      }, err => {
+        this.errorMessage = err.message;
+      }).then(res => {
+        this.imageSrv.getImage(this.authService.userDetails().uid);
+      }
+      )
   }
 
-  goToRegisterPage(){
+  goToRegisterPage() {
     this.navCtrl.navigateForward('/register');
   }
 
