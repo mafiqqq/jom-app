@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { ImageProviderService } from './services/image-provider.service';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { AuthenticateService } from '../services/authentication.service';
-import { storage } from 'firebase';
 
 @Component({
   selector: 'app-upload-photo',
@@ -23,30 +22,9 @@ export class UploadPhotoPage implements OnInit {
     private camera: Camera,
     private auth: AuthenticateService) { }
 
-
-  image: any;
   imageUrls:string[] = [];    
 
   ngOnInit() {
-  }
-
-  downloadImageUrls() {
-    try {
-      this.imageUrls.push( this.imageSrv.getImage(this.auth.userDetails().uid).pop());
-      
-      // for (var i = 0; i < promiseList.length; i++) {
-      //   this.imageUrls = promiseList[i];
-      // }
-    } catch (e) {
-      // this.errorMessage = e;
-    }
-  }
-
-  display(){
-    storage().ref().child(this.imageUrls.pop()).getDownloadURL().then((url) => {
-      this.image = url;
-    });
-    console.log(this.image);
   }
 
 

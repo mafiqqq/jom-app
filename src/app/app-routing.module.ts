@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'member-list', loadChildren: './tab3/member-list/member-list.module#MemberListPageModule' },
   { path: 'accommodation', loadChildren: './tab3/accommodation/accommodation.module#AccommodationPageModule' },
   { path: 'accommodation1', loadChildren: './tab3/accommodation1/accommodation1.module#Accommodation1PageModule' },
-  { path: 'ratinf', loadChildren: './ratinf/ratinf.module#RatinfPageModule' },
+  // { path: 'ratinf', loadChildren: './ratinf/ratinf.module#RatinfPageModule' },
   { path: 'fnb', loadChildren: './tab3/fnb/fnb.module#FnbPageModule' },
   { path: 'fnb1', loadChildren: './tab3/fnb1/fnb1.module#Fnb1PageModule' },
   { path: 'fnb2', loadChildren: './tab3/fnb2/fnb2.module#Fnb2PageModule' },

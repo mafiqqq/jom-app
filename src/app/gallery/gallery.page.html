@@ -13,9 +13,9 @@
 <!-- Display all the photos in gallery -->
 <ion-content padding>
   <div class="images">
-    <div class="one-image" *ngFor="let image of [1,2,3,4,5,6,7,8,9,10,11,12]">
-      <img src="assets/image/{{image}}.jpg">
-    </div>
+    <ion-item class="one-image" *ngFor="let item of images; let i = index; trackBy:index">
+      <img [src]=item height="90px"/>
+    </ion-item>
   </div>
 
   <!-- button link to "upload-photo" page -->
