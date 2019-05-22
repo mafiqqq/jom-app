@@ -1,0 +1,259 @@
+[33mcommit 92688cd13374db03309a1aa21763f50711f3f92c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: yungkeatchan <dialgakeat@gmail.com>
+Date:   Wed May 22 20:06:56 2019 +0800
+
+    ykphotomanagement display
+
+[33mcommit 09601f69d8ce3612e68bcc3c245583136d2da19d[m
+Merge: 82da3e0 7913290
+Author: yungkeatchan <dialgakeat@gmail.com>
+Date:   Thu May 16 09:49:18 2019 +0800
+
+    photo upload
+
+[33mcommit 82da3e036a64f9fa8c9b8e0bce87026d2fca219d[m
+Merge: 98b204c 8520530
+Author: yungkeatchan <dialgakeat@gmail.com>
+Date:   Thu May 16 09:44:30 2019 +0800
+
+    photo management
+
+[33mcommit 79132903c6a54351a1029d8f628d3f747c7d9c9c[m
+Merge: 924ddd6 ad37fc2
+Author: mafiqqq <afiqqqx1997@gmail.com>
+Date:   Thu May 16 09:13:58 2019 +0800
+
+    Updated tab1
+
+[33mcommit 924ddd6d98352ab7bd8b42f6a66aedc07e7552e5[m
+Merge: 4a1253e 9acdfb8
+Author: mafiqqq <afiqqqx1997@gmail.com>
+Date:   Thu May 16 09:10:32 2019 +0800
+
+    Updated tab1
+
+[33mcommit ad37fc2bf9a94bb82b043eec39939062077c3cf8[m
+Author: unknown <narnia_gplus@hotmail.com>
+Date:   Thu May 16 02:28:51 2019 +0800
+
+    Remove Trip List and apply in Tab 1, Tab 3 and Tab 1 Updated
+
+[33mcommit a7bb85b4241653d40a39274a89cecde4e511b581[m
+Author: KahYin28 <kahyinlow96@gmail.com>
+Date:   Wed May 15 21:21:25 2019 +0800
+
+    tab 3 create trip
+
+[33mcommit ab5ad52756324af9ae62be64cef27c7f90da91aa[m
+Merge: 14b7b71 d8746b4
+Author: KahYin28 <kahyinlow96@gmail.com>
+Date:   Wed May 15 18:59:54 2019 +0800
+
+    tab 3 create trip
+
+[33mcommit 14b7b71ea2407230a313f81c2fa6eb31fdb4a7b7[m
+Author: KahYin28 <kahyinlow96@gmail.com>
+Date:   Wed May 15 18:58:14 2019 +0800
+
+    test
+
+[33mcommit d8746b4f5b90127b8bf54a28d7000d8efbac5b8b[m
+Author: Chia Yik Man <chiayikman@gmail.com>
+Date:   Wed May 15 16:13:15 2019 +0800
+
+    front end updated
+
+[33mcommit 4a1253ee60cba7a27234c03787a234c68a284453[m
+Merge: f250780 288ae73
+Author: mafiqqq <afiqqqx1997@gmail.com>
+Date:   Wed May 15 10:01:08 2019 +0800
+
+    Updated 15/5
+
+[33mcommit 9acdfb8b6e2ee4e214e93dda71073ec10c92325b[m
+Merge: 807a05c 288ae73
+Author: Chia Yik Man <chiayikman@gmail.com>
+Date:   Tue May 14 22:22:57 2019 +0800
+
+    front-end update
+
+[33mcommit 807a05cae5d0c0ed0f558dcf7e5363f0c3d95395[m
+Author: Chia Yik Man <chiayikman@gmail.com>
+Date:   Tue May 14 20:29:16 2019 +0800
+
+    chia
+
+[33mcommit 2df60a9b5f43cf1a3d246db1e98ace8a97431328[m
+Merge: 6d0f8fb 288ae73
+Author: KahYin28 <kahyinlow96@gmail.com>
+Date:   Tue May 14 16:41:44 2019 +0800
+
+    test
+
+[33mcommit 6d0f8fb6816e65270b9540352e8bbcfd210f229a[m
+Merge: 6b7b926 8520530
+Author: KahYin28 <kahyinlow96@gmail.com>
+Date:   Tue May 14 16:40:04 2019 +0800
+
+    test
+
+[33mcommit f250780ee75aee488a808b72b678409b75c417e1[m
+Merge: 6e586d4 8520530
+Author: mafiqqq <afiqqqx1997@gmail.com>
+Date:   Tue May 14 15:46:45 2019 +0800
+
+    Updated 14/5
+
+[33mcommit 288ae734b5fac1656d8635dfe142ffec9817b86a[m
+Merge: 40f4ce0 8520530
+Author: rashel <rashelmomo@gmail.com>
+Date:   Tue May 14 15:25:30 2019 +0800
+
+    Home updated
+
+[33mcommit 40f4ce08124ba335b55fdac60d2c623c979dd79a[m
+Author: rashel <rashelmomo@gmail.com>
+Date:   Tue May 14 15:16:04 2019 +0800
+
+    Home Page 145
+
+[33mcommit 7f0670b9b28faa7bdb3eea6aba44c37a7930be2c[m
+Merge: b340295 8520530
+Author: Chia Yik Man <chiayikman@gmail.com>
+Date:   Fri May 3 21:15:00 2019 +0800
+
+    chia commit
+
+[33mcommit b3402953b746534f75b254c4eb2bb0188e1648b9[m
+Author: Chia Yik Man <chiayikman@gmail.com>
+Date:   Fri May 3 21:03:14 2019 +0800
+
+    chia commit
+
+[33mcommit 6e586d45b44d3f303e2135a6093825045638052a[m
+Author: mafiqqq <afiqqqx1997@gmail.com>
+Date:   Fri May 3 17:10:00 2019 +0800
+
+    Afiq updated
+
+[33mcommit 6b7b9264a37b3ec7272223282c4f5fd7d5ee533c[m
+Merge: c66aa16 ede1f31
+Author: KahYin28 <kahyinlow96@gmail.com>
+Date:   Fri May 3 17:01:45 2019 +0800
+
+    ky update
+
+[33mcommit 98b204cee27e5d71385bf7473f7e6b1fe032eda2[m
+Merge: 9dfc71b ede1f31
+Author: yungkeatchan <dialgakeat@gmail.com>
+Date:   Fri May 3 16:59:56 2019 +0800
+
+    yk ntg test pull qw
+
+[33mcommit 85205306fc5ba4432b976de642aedc70e7b04383[m
+Author: unknown <narnia_gplus@hotmail.com>
+Date:   Fri May 3 16:58:45 2019 +0800
+
+    Trip List
+
+[33mcommit c66aa16bbd873407c37cc282bc45668d6b22ccdb[m
+Author: KahYin28 <kahyinlow96@gmail.com>
+Date:   Fri May 3 16:29:35 2019 +0800
+
+    kahyin update
+
+[33mcommit 9dfc71b43eabd2e1fd157b057594a801adff4202[m
+Author: yungkeatchan <dialgakeat@gmail.com>
+Date:   Fri May 3 16:25:27 2019 +0800
+
+    testyk
+
+[33mcommit ede1f3105bce844d1821ba4f648c3e034eef4486[m
+Author: unknown <narnia_gplus@hotmail.com>
+Date:   Fri May 3 16:20:56 2019 +0800
+
+    Create Trip List
+
+[33mcommit 7d9129eefe896ee440710e3b5a24285303667eac[m
+Merge: 350638d 3d419f0
+Author: mafiqqq <afiqqqx1997@gmail.com>
+Date:   Tue Apr 23 14:02:37 2019 +0800
+
+    Updated merge
+
+[33mcommit 350638d36adac87c6a8541a993e9a8ce5241e804[m
+Merge: efd413c 7148436
+Author: mafiqqq <afiqqqx1997@gmail.com>
+Date:   Tue Apr 23 13:59:13 2019 +0800
+
+    Solved
+
+[33mcommit 3d419f096bd04d3b2c6569deff78cb8f769daf6f[m
+Merge: d1a7e34 bb95126
+Author: unknown <liewling97@gmail.com>
+Date:   Thu Apr 18 03:49:54 2019 +0800
+
+    edited tab 5, created edit-profile.page, gallery.page, upload-photo.page, created 'image' file in 'assets' folder
+
+[33mcommit d1a7e3422bd98e896a8a9c0b48de6183476b6cb9[m
+Author: unknown <liewling97@gmail.com>
+Date:   Thu Apr 18 03:45:01 2019 +0800
+
+    edited tab 5, created edit-profile.page, gallery.page, upload-photo.page, created 'image' file in 'assets' folder
+
+[33mcommit bb95126271acc92a6e027c834d15a3159956c180[m
+Merge: 72e59f7 7c3d5aa
+Author: Chia Yik Man <chiayikman@gmail.com>
+Date:   Wed Apr 17 23:22:10 2019 +0800
+
+    Merge branch 'master' of https://github.com/mafiqqq/jom-app
+    
+    jom project front end update# the commit.
+
+[33mcommit 72e59f7aea8c66d2b12225b82dafb3dc0d209aa4[m
+Author: Chia Yik Man <chiayikman@gmail.com>
+Date:   Wed Apr 17 23:13:14 2019 +0800
+
+    Front-end updated
+
+[33mcommit 7c3d5aa03ffe43fe38be513f4c8437311ff226f6[m
+Author: unknown <narnia_gplus@hotmail.com>
+Date:   Wed Apr 17 22:15:22 2019 +0800
+
+    Tab3 Updated with Create-trip BackEnd and able to store in Firestore, might need to install some codes (npm install ngx-toastr --save) and (npm install @angular/animations --save)
+
+[33mcommit cf5929f6dba884add1660bae7541c5356b5ae4ce[m
+Author: unknown <narnia_gplus@hotmail.com>
+Date:   Wed Apr 17 22:09:26 2019 +0800
+
+    Tab3 Updated with Create-trip BackEnd and store in Firestore, might need to install some code npm install ngx-toastr --save
+
+[33mcommit 7148436f3247314ec306b3122e15f143163c3ba2[m
+Author: unknown <narnia_gplus@hotmail.com>
+Date:   Wed Apr 17 16:36:34 2019 +0800
+
+    Tab 3 Updated
+
+[33mcommit 4c5b866f5590833969453eac7accd6d5cd6545d2[m
+Author: KahYin28 <kahyinlow96@gmail.com>
+Date:   Tue Apr 16 16:32:19 2019 +0800
+
+    tab3
+
+[33mcommit efd413c91d6a0e03e78625fcd47d922a073f2bcf[m
+Author: mafiqqq <afiqqqx1997@gmail.com>
+Date:   Mon Apr 15 01:27:38 2019 +0800
+
+    Login & Register
+
+[33mcommit 5c91140e08ffdf64f417d2e148b5bab1d819c732[m
+Author: mafiqqq <afiqqqx1997@gmail.com>
+Date:   Thu Mar 28 11:09:48 2019 +0800
+
+    First Set Up Commit
+
+[33mcommit f9bcc638e1e58eee21f338cdd712966ebdeef775[m
+Author: mafiqqq <afiqqqx1997@gmail.com>
+Date:   Mon Mar 25 14:09:25 2019 +0800
+
+    Initial commit

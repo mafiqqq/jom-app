@@ -6,6 +6,11 @@
     background: var(--ion-item-background,var(--ion-background-color,#fff));
 }
 
-ion-card{
+.ion-card{
     border-radius: 15px;
+}
+
+.select-text{
+    white-space:inherit !important;
+    
 }
