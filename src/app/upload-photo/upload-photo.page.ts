@@ -1,5 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { IonicSelectableComponent } from 'ionic-selectable';
+
+class Location {
+  public id: number;
+  public name: string;
+}
 import { ImageProviderService } from './services/image-provider.service';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { AuthenticateService } from '../services/authentication.service';
@@ -17,12 +23,6 @@ export class UploadPhotoPage implements OnInit {
 
   // debug purpose
   errorMessage: string = "";
-
-  constructor(private router: Router,
-    private imageSrv: ImageProviderService,
-    private camera: Camera,
-    private auth: AuthenticateService) { }
-
 
   image: any;
   imageUrls:string[] = [];    
@@ -73,5 +73,25 @@ export class UploadPhotoPage implements OnInit {
   gallery() {
     this.router.navigateByUrl('/gallery');
   }
+
+  
+  locations: Location[];
+  location: Location;
+
+
+  constructor(private router: Router,
+    private imageSrv: ImageProviderService,
+    private camera: Camera,
+    private auth: AuthenticateService) {
+    this.locations = [
+      { id: 1, name: 'Serdang' },
+      { id: 2, name: 'Bukit Broga' },
+      { id: 3, name: 'Navlakhi' }
+    ];
+   }
+
+   userChanged(event: { component: IonicSelectableComponent, value: any}){
+     console.log('location: ', event.value);
+   }
 
 }
