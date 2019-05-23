@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
@@ -13,17 +13,50 @@ import { NavController } from '@ionic/angular';
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss']
 })
+
 export class Tab3Page implements OnInit{
+
+  //GoogleAutocomplete = new google.maps.places.AutocompleteService();
+  GoogleAutocomplete = new google.maps.places.AutocompleteService();
+  autocomplete = { input: '' };
+  autocompleteItems = [];
+  geocoder = new google.maps.Geocoder;
+  markers = [];
+   message:any;
+  //error 'google': npm install @types/googlemaps --save-dev
+
+
  constructor(private router: Router,
   private firestore: AngularFirestore,
   private service: TripService,
   private toastr: ToastrService,
   private emailservice: AuthenticateService,
-  private navCtrl: NavController) {}
+  private navCtrl: NavController, private zone: NgZone) {}
 
 
   ngOnInit() {
     this.resetForm();
+  }
+  async updateSearchResults(){
+    if (this.autocomplete.input == '') {
+      this.autocompleteItems = [];
+      return;
+    }
+    this.GoogleAutocomplete.getPlacePredictions({ input: this.autocomplete.input },
+    (predictions, status) => {
+      this.autocompleteItems = [];
+      this.zone.run(() => {
+        predictions.forEach((prediction) => {
+          this.autocompleteItems.push(prediction);
+        });
+      });
+    });
+  }
+  selectSearchResult(item){
+    this.message = item.description;
+    this.autocomplete.input=this.message;
+    this.autocompleteItems = [];
+  
   }
 
   resetForm(form?: NgForm)
@@ -39,7 +72,7 @@ export class Tab3Page implements OnInit{
       bank: '',
       trip_type: '',
       trip_name: '',
-      trip_dest: '',
+      trip_dest:this.message,
       end_date: '',
       end_time: '',
       start_date: '',

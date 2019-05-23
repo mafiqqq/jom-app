@@ -34,11 +34,15 @@
         <ion-input name="trip_name" #trip_name="ngModel" [(ngModel)]="service.formData.trip_name" placeholder="Trip Name"></ion-input>
       </ion-item>
 
-      <ion-item>
-        <!-- variable of trip destination-->
-        <ion-input name="trip_dest" #trip_dest="ngModel" [(ngModel)]="service.formData.trip_dest" placeholder="Trip Destination"></ion-input>
+        <!-- variable of trip destination  <ion-input name="trip_dest" #trip_dest="ngModel" [(ngModel)]="service.formData.trip_dest" placeholder="Trip Destination"></ion-input> -->
+        <ion-searchbar name="trip_dest" #trip_dest="ngModel" [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Search for a place"></ion-searchbar>
+      <ion-list [hidden]="autocompleteItems.length == 0">
+        <ion-item  *ngFor="let item of autocompleteItems;let i = index" tappable (click)="selectSearchResult(item)">
+          {{ item.description }}
+        </ion-item>
+      </ion-list>
         <!-- suggest suitable location -->
-      </ion-item>
+
 
       <ion-row>
         <ion-col>
